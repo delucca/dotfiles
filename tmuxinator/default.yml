@@ -1,0 +1,11 @@
+name: default
+root: ~/
+
+windows:
+- main:
+    layout: main-vertical
+    panes:
+    - clear
+    - btm
+
+- logs: journalctl -f

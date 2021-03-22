@@ -1,0 +1,14 @@
+name: odelucca-poscomp
+
+windows:
+- main:
+    layout: main-vertical
+    root: <%= ENV["HOME"] %>/Documents/POSCOMP/Notebooks
+    panes:
+    - clear
+    - cleartree
+
+- jupyter-server:
+    root: <%= ENV["HOME"] %>/Documents/POSCOMP/Notebooks
+    panes:
+    - jupyter notebook

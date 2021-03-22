@@ -1,0 +1,16 @@
+name: bud
+
+windows:
+- execution-mode:
+    layout: main-vertical
+    root: <%= ENV["CODEDIR"] %>/delucca/execution-mode
+    panes:
+    - clear
+    - cleartree
+
+- business:
+    layout: main-vertical
+    root: <%= ENV["CODEDIR"] %>/delucca/business
+    panes:
+    - clear
+    - cleartree
