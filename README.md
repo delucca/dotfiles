@@ -17,7 +17,7 @@ My dotfiles are managed by [fresh].
 
 To install those, you need to run:
 ```
-make install
+chmod +x ./setup.sh && ./setup.sh
 ```
 
 Them, if you've installed the Fresh dotfiles manager, you can simply run:
