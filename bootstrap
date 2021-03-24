@@ -1,8 +1,2 @@
-#!/usr/bin/env bash
-
-function main {
-  rm ~/.zshrc
-  ln -s ~/.zshrc .zshrc
-}
-
-main
+rm ~/.zshrc
+ln -s ~/.zshrc .zshrc
