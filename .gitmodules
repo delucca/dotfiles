@@ -1,6 +1,0 @@
-[submodule "firefox/FlyingFox"]
-	path = firefox/FlyingFox
-	url = git@github.com:akshat46/FlyingFox.git
-[submodule "firefox/flying-fox"]
-	path = firefox/flying-fox
-	url = git@github.com:akshat46/FlyingFox.git
