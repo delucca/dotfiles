@@ -53,20 +53,24 @@ function install_shell_tools {
 }
 
 function install_zsh_plugin_manager {
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+  rm -rf "${HOME}/.zinit" || true
+  mkdir "${HOME}/.zinit"
+
+  git clone https://github.com/zdharma/zinit.git "${HOME}/.zinit/bin"
 }
 
 function install_starship {
   pushd /tmp > /dev/null
 
   curl -fsSL https://starship.rs/install.sh -Lso "starship_install.sh"
+  chmod +x "./starship_install.sh"
   ./starship_install.sh -y
 
   popd > /dev/null
 }
 
 function install_debug_tools {
-  curl -fsSL https://gist.githubusercontent.com/delucca/2ecfeb34eeffd9d92d74631a9c24f9c0/raw/63e9cfc9f241bc420adca7198e5f6c8e6a6a9d9d/debug-environment.sh | bash
+  curl -fsSL https://gist.githubusercontent.com/delucca/2ecfeb34eeffd9d92d74631a9c24f9c0/raw/365be51932f3a847034000aca130901b4ed13457/debug-environment.sh | bash
 }
 
 # Install min fresh
