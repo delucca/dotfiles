@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# DEPENDENCIES
+# -------------------------------------------------------------------------------------------------
+# - bash 4
+
+bash -c "`curl -sL https://get.freshshell.com`"
+rm ~/.freshrc
+ln -s $(pwd)/freshrc ~/.freshrc
+source ~/.fresh/build/shell.sh	
+fresh
