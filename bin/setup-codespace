@@ -1,0 +1,101 @@
+#!/usr/bin/env bash
+
+# DEPENDENCIES
+# -------------------------------------------------------------------------------------------------
+# - bash 4
+
+# Global variables
+# -------------------------------------------------------------------------------------------------
+FILE_PATH=$(realpath "${0}")
+BIN_DIR="${BIN_DIR:-$(dirname $FILE_PATH)}"
+PARENT_BIN_DIR="${PARENT_BIN_DIR:-$(dirname $BIN_DIR)}"
+
+# Entrypoint
+# -------------------------------------------------------------------------------------------------
+
+function main {
+  validate_requirements
+  install_fresh
+  install_shell_tools
+  install_min_fresh
+}
+
+# Validate requirements
+# -------------------------------------------------------------------------------------------------
+
+function validate_requirements {
+  validate_bash_dependency
+}
+
+function validate_bash_dependency {
+  major_version="$(bash --version | head -1 | cut -d ' ' -f 4 | cut -d '.' -f 1)"
+  min_major_version="4"
+
+  if [ "${major_version}" -lt "${min_major_version}" ]; then
+    throw_error "Your bash major version must be ${min_major_version} or greater"
+  fi
+}
+
+# Install fresh
+# -------------------------------------------------------------------------------------------------
+
+function install_fresh {
+  source "${BIN_DIR}/install-fresh"
+}
+
+# Install shell tools
+# -------------------------------------------------------------------------------------------------
+
+function install_shell_tools {
+  install_zsh_plugin_manager
+  install_starship
+  install_debug_tools
+}
+
+function install_zsh_plugin_manager {
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+}
+
+function install_starship {
+  pushd /tmp > /dev/null
+
+  curl -fsSL https://starship.rs/install.sh -Lso "starship_install.sh"
+  ./starship_install.sh -y
+
+  popd > /dev/null
+}
+
+function install_debug_tools {
+  curl -fsSL https://gist.githubusercontent.com/delucca/2ecfeb34eeffd9d92d74631a9c24f9c0/raw/63e9cfc9f241bc420adca7198e5f6c8e6a6a9d9d/debug-environment.sh | bash
+}
+
+# Install min fresh
+# -------------------------------------------------------------------------------------------------
+
+function install_min_fresh {
+  update_fresh_symlinks
+  remove_zsh_old_config
+  run_fresh
+}
+
+function update_fresh_symlinks {
+  rm -rf "${HOME}/.dotfiles" || true
+  rm -rf "${HOME}/.fresrc" || true
+
+  ln -s "${PARENT_BIN_DIR}" "${HOME}/.dotfiles"
+  ln -s "${PARENT_BIN_DIR}/freshrc.min" "${HOME}/.freshrc"
+}
+
+function remove_zsh_old_config {
+  rm -rf "${HOME}/.zshrc" || true
+}
+
+function run_fresh {
+  source "${HOME}/.fresh/build/shell.sh"
+  fresh
+}
+
+# Execute
+# -------------------------------------------------------------------------------------------------
+
+main
