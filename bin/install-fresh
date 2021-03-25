@@ -43,11 +43,11 @@ function install_fresh {
 }
 
 function install_from_remote {
-  bash -c "curl -sL https://get.freshshell.com"
+  bash -c "`curl -sL https://get.freshshell.com`"
 }
 
 function link_synced_freshrc {
-  rm -f "${HOME}/.freshrc" || true
+  sudo rm -rf "${HOME}/.freshrc" || true
   ln -s "${PARENT_BIN_DIR}/freshrc" "${HOME}/.freshrc"
 }
 
