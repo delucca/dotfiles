@@ -5,6 +5,10 @@
 
 current_emulator=$(pstree -sA $$)
 
+# Keychain
+zstyle :omz:plugins:keychain agents ssh
+zstyle :omz:plugins:keychain identities id
+
 # Compinit
 autoload -U compinit && compinit
 
