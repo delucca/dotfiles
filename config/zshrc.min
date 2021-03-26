@@ -55,7 +55,7 @@ zinit light "Tarrasch/zsh-bd"
 zinit light "changyuheng/zsh-interactive-cd"
 zinit light "shannonmoeller/up"
 zinit light "Aloxaf/fzf-tab"
-zinit light " akoenig/npm-run.plugin.zsh"
+zinit light "akoenig/npm-run.plugin.zsh"
 
 zinit cdreplay -q
 
