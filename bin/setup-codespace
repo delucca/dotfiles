@@ -104,10 +104,12 @@ function run_fresh {
 # -------------------------------------------------------------------------------------------------
 
 function setup_ssh_credentials {
-  ensure_ssh_dir
-  copy_private_key
-  copy_public_key
-  start_ssh_agent
+  if [[ -n "${SSH_CODESPACE_PRIVATE_KEY}" && -n "${SSH_CODESPACE_PUBLIC_KEY}" ]]; then
+    ensure_ssh_dir
+    copy_private_key
+    copy_public_key
+    start_ssh_agent
+  fi
 }
 
 function ensure_ssh_dir {
