@@ -15,10 +15,13 @@ PARENT_BIN_DIR="${PARENT_BIN_DIR:-$(dirname $BIN_DIR)}"
 
 function main {
   validate_requirements
+  
+  setup_ssh_credentials
   install_fresh
   install_shell_tools
   install_min_fresh
-  setup_ssh_credentials
+  
+  zsh
 }
 
 # Validate requirements
