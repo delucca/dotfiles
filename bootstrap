@@ -37,7 +37,7 @@ function validate_bash_dependency {
 # -------------------------------------------------------------------------------------------------
 
 function setup_dotfiles_if_in_codespace {
-  if [ -n $CODESPACE ]; then
+  if [ -n $CODESPACES ]; then
     source "${BIN_DIR}/setup-codespace"
   fi
 }
