@@ -53,6 +53,7 @@ function install_fresh {
 function install_shell_tools {
   install_zsh_plugin_manager
   install_starship
+  install_keychain
   install_debug_tools
 }
 
@@ -71,6 +72,10 @@ function install_starship {
   ./starship_install.sh -y
 
   popd > /dev/null
+}
+
+function install_keychain {
+  sudo apt-get install keychain
 }
 
 function install_debug_tools {
