@@ -1,0 +1,55 @@
+#!/usr/bin/env zsh
+
+# Zinit
+export PLUGINS=$HOME/.zinit/plugins
+
+# Interface in general
+export COMPLETION_WAITING_DOTS='true'
+
+# FZF
+export FZF_DEFAULT_OPTS="\
+  --ansi \
+  --cycle \
+  --layout='reverse' \
+  --height='20' \
+  --preview='(highlight -O ansi -l {} 2> /dev/null || bat --style=numbers --color=always {} || cat {} || tree -L 2 -C {}) 2> /dev/null | head -200' \
+  --preview-window='right:70%:noborder' \
+  --bind='?:toggle-preview' \
+  --bind='tab:down' \
+"
+export FZF_DEFAULT_COMMAND_OPTS="
+  --hidden \
+  --follow \
+  --type='f' \
+  --exclude='.git' \
+"
+export FZF_CTRL_R_OPTS="
+  --sort \
+  --exact \
+  --preview-window='down:3:hidden:wrap' \
+"
+export FZF_CTRL_T_OPTS="
+  --select-1 \
+  --exit-0 \
+"
+export FZF_ALT_C_OPTS="
+  --select-1 \
+  --exit-0 \
+"
+export FZF_DEFAULT_COMMAND="fd ${FZF_DEFAULT_COMMAND_OPTS}"
+
+# Spaceship
+export SPACESHIP_KUBECTL_SHOW='true'
+
+# PATH
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/usr/bin:/bin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/usr/lib/jvm/default/bin"
+export PATH="$PATH:/usr/bin/site_perl"
+export PATH="$PATH:/usr/bin/vendor_perl"
+export PATH="$PATH:/usr/bin/core_perl"
+export PATH="$PATH:$HOME/.gem/ruby/2.6.0/bin"
+export PATH="$PATH:/var/lib/snapd/snap/bin"
+export PATH="$PATH:/snap/bin"
