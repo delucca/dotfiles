@@ -132,7 +132,7 @@ function copy_public_key {
 
 function start_ssh_agent {
   eval $(ssh-agent -s)
-  ssh-add "~/.ssh/id"
+  ssh-add "${HOME}/.ssh/id"
 }
 
 # Execute
