@@ -94,7 +94,7 @@ function install_min_fresh {
 
 function update_fresh_symlinks {
   sudo rm -f "${HOME}/.dotfiles" || true
-  sudo rm -f "${HOME}/.fresrc" || true
+  sudo rm -f "${HOME}/.freshrc" || true
 
   ln -s "${PARENT_BIN_DIR}" "${HOME}/.dotfiles"
   ln -s "${PARENT_BIN_DIR}/freshrc.min" "${HOME}/.freshrc"
