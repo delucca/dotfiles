@@ -104,7 +104,7 @@ function run_fresh {
 # -------------------------------------------------------------------------------------------------
 
 function setup_ssh_credentials {
-  if [[ -n "${SSH_CODESPACE_PRIVATE_KEY}" && -n "${SSH_CODESPACE_PUBLIC_KEY}" ]]; then
+  if [[ -n "${SSH_PRIVATE_KEY}" && -n "${SSH_PUBLIC_KEY}" ]]; then
     ensure_ssh_dir
     copy_private_key
     copy_public_key
@@ -117,14 +117,14 @@ function ensure_ssh_dir {
 }
 
 function copy_private_key {
-  private_key_file_path = "${HOME}/.ssh/id_rsa"
+  private_key_file_path = "${HOME}/.ssh/id"
   
-  echo "${SSH_CODESPACE_PRIVATE_KEY}" > $private_key_file_path
+  echo "${SSH_PRIVATE_KEY}" > $private_key_file_path
   chmod 600 $private_key_file_path
 }
 
 function copy_public_key {
-  public_key_file_path = "${HOME}/.ssh/id_rsa.pub"
+  public_key_file_path = "${HOME}/.ssh/id.pub"
   
   echo "${SSH_CODESPACE_PUBLIC_KEY}" > $public_key_file_path
   chmod 600 $public_key_file_path
@@ -132,7 +132,7 @@ function copy_public_key {
 
 function start_ssh_agent {
   eval $(ssh-agent -s)
-  ssh-add ~/.ssh/id_rsa
+  ssh-add "~/.ssh/id"
 }
 
 # Execute
