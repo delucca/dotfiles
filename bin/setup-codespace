@@ -22,6 +22,7 @@ function main {
   install_min_fresh
   
   install_zinit_plugins
+  fix_codespace_issues
 }
 
 # Validate requirements
@@ -153,6 +154,22 @@ function start_ssh_agent {
 
 function install_zinit_plugins {
   zsh -ic "@zinit-scheduler burst"
+}
+
+# Fix codespace issues
+# -------------------------------------------------------------------------------------------------
+
+function fix_codespace_issues {
+  set_ssh_config
+}
+
+function set_ssh_config {
+  touch "${HOME}/.ssh/config"
+  cat<<EOF >${HOME}/.ssh/config
+Host github.com
+  User delucca
+  IdentityFile ~/.ssh/id
+EOF'
 }
 
 # Execute
