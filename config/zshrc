@@ -59,6 +59,7 @@ zinit light "tcnksm/docker-alias"
 zinit light "bonnefoa/kubectl-fzf"
 zinit light "Aloxaf/fzf-tab"
 zinit light "lukechilds/zsh-nvm"
+zinit light "lukechilds/zsh-better-npm-completion"
 # zinit light "b4b4r07/emoji-cli"
 # /\ Waiting for this issue: https://github.com/b4b4r07/emoji-cli/issues/20
 
