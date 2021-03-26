@@ -2,8 +2,8 @@
 fresh freshshell/fresh bin/fresh --bin=~/.local/bin/fresh
 
 # ZSH
-fresh config/zshrc --file
-fresh config/zshenv --file
+fresh config/zshrc.min --file=~/.zshrc
+fresh config/zshenv.min --file=~/.zshenv
 
 # Shell
 fresh shell/aliases/\*
