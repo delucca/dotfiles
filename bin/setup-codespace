@@ -109,6 +109,7 @@ function run_fresh {
 function setup_ssh_credentials {
   if [[ -n "${SSH_PRIVATE_KEY}" && -n "${SSH_PUBLIC_KEY}" ]]; then
     ensure_ssh_dir
+    trust_github_host
     copy_private_key
     copy_public_key
     start_ssh_agent
@@ -117,6 +118,10 @@ function setup_ssh_credentials {
 
 function ensure_ssh_dir {
   mkdir -p "${HOME}/.ssh"
+}
+
+function trust_github_host {
+  ssh-keyscan github.com >> "${HOME}/.ssh/known_hosts"
 }
 
 function copy_private_key {
