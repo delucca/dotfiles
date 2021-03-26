@@ -88,7 +88,6 @@ function install_debug_tools {
 
 function install_min_fresh {
   update_fresh_symlinks
-  remove_zsh_old_config
   run_fresh
 }
 
@@ -98,10 +97,6 @@ function update_fresh_symlinks {
 
   ln -s "${PARENT_BIN_DIR}" "${HOME}/.dotfiles"
   ln -s "${PARENT_BIN_DIR}/freshrc.min" "${HOME}/.freshrc"
-}
-
-function remove_zsh_old_config {
-  rm -rf "${HOME}/.zshrc" || true
 }
 
 function run_fresh {
