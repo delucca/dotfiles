@@ -70,7 +70,7 @@ function install_starship {
 }
 
 function install_debug_tools {
-  curl -fsSL https://gist.githubusercontent.com/delucca/2ecfeb34eeffd9d92d74631a9c24f9c0/raw/daa9a8593c92b5d7799dfae187fe78d6fc6794af/debug-environment.sh | bash
+  curl -fsSL https://gist.githubusercontent.com/delucca/2ecfeb34eeffd9d92d74631a9c24f9c0/raw/e50f9accee6f1b8133006ae615e3c56d97a6bf96/debug-environment.sh | bash
 }
 
 # Install min fresh
