@@ -139,7 +139,7 @@ function copy_private_key {
 function copy_public_key {
   public_key_file_path="${HOME}/.ssh/id.pub"
   
-  echo "${SSH_CODESPACE_PUBLIC_KEY}" > $public_key_file_path
+  echo "${SSH_PUBLIC_KEY}" > $public_key_file_path
   chmod 600 $public_key_file_path
 }
 
