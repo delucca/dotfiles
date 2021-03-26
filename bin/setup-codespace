@@ -117,14 +117,14 @@ function ensure_ssh_dir {
 }
 
 function copy_private_key {
-  private_key_file_path = "${HOME}/.ssh/id"
+  private_key_file_path="${HOME}/.ssh/id"
   
   echo "${SSH_PRIVATE_KEY}" > $private_key_file_path
   chmod 600 $private_key_file_path
 }
 
 function copy_public_key {
-  public_key_file_path = "${HOME}/.ssh/id.pub"
+  public_key_file_path="${HOME}/.ssh/id.pub"
   
   echo "${SSH_CODESPACE_PUBLIC_KEY}" > $public_key_file_path
   chmod 600 $public_key_file_path
