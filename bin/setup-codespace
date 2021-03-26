@@ -172,7 +172,7 @@ function set_ssh_config {
 Host github.com
   User delucca
   IdentityFile ~/.ssh/id
-EOF'
+EOF
 }
 
 # Execute
