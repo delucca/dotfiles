@@ -21,7 +21,7 @@ function main {
   install_shell_tools
   install_min_fresh
   
-  zsh
+  install_zinit_plugins
 }
 
 # Validate requirements
@@ -141,6 +141,13 @@ function copy_public_key {
 function start_ssh_agent {
   eval $(ssh-agent -s)
   ssh-add "${HOME}/.ssh/id"
+}
+
+# Install Zinit plugins
+# -------------------------------------------------------------------------------------------------
+
+function install_zinit_plugins {
+  zsh -ic "@zinit-scheduler burst"
 }
 
 # Execute
