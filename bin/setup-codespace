@@ -164,8 +164,11 @@ function fix_codespace_issues {
 }
 
 function set_ssh_config {
-  touch "${HOME}/.ssh/config"
-  cat<<EOF >${HOME}/.ssh/config
+  ssh_config_file_path="${HOME}/.ssh/config"
+  
+  touch $ssh_config_file_path
+  chmod 600 $ssh_config_file_path
+  cat<<EOF >$ssh_config_file_path
 Host github.com
   User delucca
   IdentityFile ~/.ssh/id
