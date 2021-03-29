@@ -45,27 +45,13 @@ function setup_dotfiles {
 function setup_codespaces {
   log_title "BOOTSTRAP CODESPACES"
 
- start_spinner_in_category 'Prepare' 'Fetching bootstrap script'
- curl ${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/bin/bootstrap-codespaces -Lso "/tmp/bootstrap-codespaces" > /dev/null
- stop_spinner $?
-
- chmod +x "/tmp/bootstrap-codespaces"
-
-  export SSH_PRIVATE_KEY
-  export SSH_PUBLIC_KEY
-
-  /tmp/bootstrap-codespaces
+  source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-codespaces")
 }
 
 function setup_code_env {
   log_title "BOOTSTRAP CODE ENV"
 
-  start_spinner_in_category 'Prepare' 'Fetching bootstrap script'
-  curl ${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/bin/bootstrap-code-env -Lso "/tmp/bootstrap-code-env" > /dev/null
-  stop_spinner $?
-
-  chmod +x "/tmp/bootstrap-code-env"
-  /tmp/bootstrap-code-env --dotfiles
+  source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-code-env") --dotfiles
 }
 
 # Execute
