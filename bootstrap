@@ -11,7 +11,9 @@ IMPORT_COMMAND=${IMPORT_COMMAND:-"curl -s"}
 LAZYSCRIPTS_REPOSITORY_URL=${REPOSITORY_URL:-"https://raw.githubusercontent.com/delucca/lazyscripts"}
 LAZYSCRIPTS_REPOSITORY_BRANCH=${REPOSITORY_BRANCH:-"main"}
 
-source <("${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/validators.sh")
+source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/spinner.sh")
+source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/logger.sh")
+source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/validators.sh")
 
 # Entrypoint
 # -------------------------------------------------------------------------------------------------
@@ -33,11 +35,33 @@ function validate_requirements {
 # -------------------------------------------------------------------------------------------------
 
 function setup_dotfiles {
-  [ "${CODESPACES}" = "true" ]; then
-    source <("${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/bin/bootstrap-codespaces")
+  if [ "${CODESPACES}" = "true" ]; then
+    setup_codespaces
   else
-    source <("${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/bin/bootstrap-code-env") --dotfiles
+    setup_code_env
   fi
+}
+
+function setup_codespaces {
+  log_title "BOOTSTRAP CODESPACES"
+
+  start_spinner_in_category 'Prepare' 'Fetching bootstrap script'
+  curl ${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/bin/bootstrap-codespaces -Lso "/tmp/bootstrap-codespaces" > /dev/null
+  stop_spinner $?
+
+  chmod +x "/tmp/bootstrap-codespaces"
+  sudo /tmp/bootstrap-codespaces
+}
+
+function setup_code_env {
+  log_title "BOOTSTRAP CODE ENV"
+
+  start_spinner_in_category 'Prepare' 'Fetching bootstrap script'
+  curl ${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/bin/bootstrap-code-env -Lso "/tmp/bootstrap-code-env" > /dev/null
+  stop_spinner $?
+
+  chmod +x "/tmp/bootstrap-code-env"
+  sudo /tmp/bootstrap-code-env --dotfiles
 }
 
 # Execute
