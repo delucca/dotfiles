@@ -4,17 +4,22 @@
 # -------------------------------------------------------------------------------------------------
 # - bash 4
 
-# Global variables
+# Imports
 # -------------------------------------------------------------------------------------------------
-FILE_PATH=$(realpath "${0}")
-BIN_DIR="$(dirname $FILE_PATH)/bin"
+
+IMPORT_COMMAND=${IMPORT_COMMAND:-"curl -s"}
+LAZYSCRIPTS_REPOSITORY_URL=${REPOSITORY_URL:-"https://raw.githubusercontent.com/delucca/lazyscripts"}
+LAZYSCRIPTS_REPOSITORY_BRANCH=${REPOSITORY_BRANCH:-"main"}
+
+source <("${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/validators.sh")
 
 # Entrypoint
 # -------------------------------------------------------------------------------------------------
 
 function main {
   validate_requirements
-  setup_dotfiles_if_in_codespace
+
+  setup_dotfiles
 }
 
 # Validate requirements
@@ -24,21 +29,14 @@ function validate_requirements {
   validate_bash_dependency
 }
 
-function validate_bash_dependency {
-  major_version="$(bash --version | head -1 | cut -d ' ' -f 4 | cut -d '.' -f 1)"
-  min_major_version="4"
-
-  if [ "${major_version}" -lt "${min_major_version}" ]; then
-    throw_error "Your bash major version must be ${min_major_version} or greater"
-  fi
-}
-
-# Setup dotfiles if in Codesapce
+# Setup dotfiles
 # -------------------------------------------------------------------------------------------------
 
-function setup_dotfiles_if_in_codespace {
-  if [ -n $CODESPACES ]; then
-    source "${BIN_DIR}/setup-codespace"
+function setup_dotfiles {
+  [ "${CODESPACES}" = "true" ]; then
+    source <("${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/bin/bootstrap-codespaces")
+  else
+    source <("${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/bin/bootstrap-code-env") --dotfiles
   fi
 }
 
