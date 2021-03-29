@@ -17,7 +17,7 @@ My dotfiles are managed by [fresh].
 
 To install those, you need to run:
 ```
-chmod +x ./setup.sh && ./setup.sh
+./bootstrap
 ```
 
 Them, if you've installed the Fresh dotfiles manager, you can simply run:

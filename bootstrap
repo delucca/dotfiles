@@ -4,17 +4,24 @@
 # -------------------------------------------------------------------------------------------------
 # - bash 4
 
-# Global variables
+# Imports
 # -------------------------------------------------------------------------------------------------
-FILE_PATH=$(realpath "${0}")
-BIN_DIR="$(dirname $FILE_PATH)/bin"
+
+IMPORT_COMMAND=${IMPORT_COMMAND:-"curl -s"}
+LAZYSCRIPTS_REPOSITORY_URL=${REPOSITORY_URL:-"https://raw.githubusercontent.com/delucca/lazyscripts"}
+LAZYSCRIPTS_REPOSITORY_BRANCH=${REPOSITORY_BRANCH:-"main"}
+
+source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/spinner.sh")
+source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/log.sh")
+source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/validators.sh")
 
 # Entrypoint
 # -------------------------------------------------------------------------------------------------
 
 function main {
   validate_requirements
-  setup_dotfiles_if_in_codespace
+
+  setup_dotfiles
 }
 
 # Validate requirements
@@ -24,22 +31,27 @@ function validate_requirements {
   validate_bash_dependency
 }
 
-function validate_bash_dependency {
-  major_version="$(bash --version | head -1 | cut -d ' ' -f 4 | cut -d '.' -f 1)"
-  min_major_version="4"
+# Setup dotfiles
+# -------------------------------------------------------------------------------------------------
 
-  if [ "${major_version}" -lt "${min_major_version}" ]; then
-    throw_error "Your bash major version must be ${min_major_version} or greater"
+function setup_dotfiles {
+  if [ "${CODESPACES}" = "true" ]; then
+    setup_codespaces
+  else
+    setup_code_env
   fi
 }
 
-# Setup dotfiles if in Codesapce
-# -------------------------------------------------------------------------------------------------
+function setup_codespaces {
+  log_title "BOOTSTRAP CODESPACES"
 
-function setup_dotfiles_if_in_codespace {
-  if [ -n $CODESPACES ]; then
-    source "${BIN_DIR}/setup-codespace"
-  fi
+  source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-codespaces")
+}
+
+function setup_code_env {
+  log_title "BOOTSTRAP CODE ENV"
+
+  source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-code-env") --dotfiles
 }
 
 # Execute
