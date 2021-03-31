@@ -13,7 +13,7 @@ zstyle :omz:plugins:keychain identities id
 autoload -U compinit && compinit
 
 # Fresh
-source ~/.fresh/build/shell.sh 
+source ~/.fresh/build/shell.sh
 
 # FZF
 source ~/.fzf.zsh
@@ -42,6 +42,7 @@ zinit snippet "OMZ::plugins/git-extras/git-extras.plugin.zsh"
 zinit snippet "OMZ::plugins/kubectl/kubectl.plugin.zsh"
 zinit snippet "OMZ::plugins/dotenv/dotenv.plugin.zsh"
 zinit snippet "OMZ::plugins/keychain/keychain.plugin.zsh"
+zinit snippet "OMZ::plugins/fzf/fzf.plugin.zsh"
 
 # # Improving ZSH usage
 zinit light "chrissicool/zsh-256color"
