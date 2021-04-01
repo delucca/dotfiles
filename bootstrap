@@ -21,7 +21,11 @@ source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_R
 function main {
   validate_requirements
 
-  setup_dotfiles
+  if [ "${CODESPACES}" = "true" ]; then
+    setup_codespaces
+  else
+    setup_local
+  fi
 }
 
 # Validate requirements
@@ -31,25 +35,47 @@ function validate_requirements {
   validate_bash_dependency
 }
 
-# Setup dotfiles
+# Setup codespaces
 # -------------------------------------------------------------------------------------------------
 
-function setup_dotfiles {
-  if [ "${CODESPACES}" = "true" ]; then
-    setup_codespaces
-  else
-    setup_code_env
-  fi
+function setup_codespaces {
+  log_title "SETUP CODESPACES"
+
+  bootstrap_codespaces
+  post_bootstrap_hook_codespaces
 }
 
-function setup_codespaces {
-  log_title "BOOTSTRAP CODESPACES"
+function bootstrap_codespaces {
+  log_title "BOOTSTRAP"
 
   source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-codespaces")
 }
 
+function post_bootstrap_hook_codespaces {
+  log_title "POST BOOTSTRAP HOOK"
+
+  update_local_git_config
+}
+
+function update_local_git_config {
+  start_spinner_in_category 'git' 'Updating local git config'
+
+  rm -f "${HOME}/.gitconfig.local"
+  ln -s "${HOME}/.dotfiles/config/gitconfig.codespaces" "${HOME}/.gitconfig.local"
+
+  stop_spinner $?
+}
+
+# Setup local
+# -------------------------------------------------------------------------------------------------
+
 function setup_code_env {
-  log_title "BOOTSTRAP CODE ENV"
+  log_title "SETUP LOCAL"
+
+  bootstrap_local
+
+function bootstrap_local {
+  log_title "BOOTSTRAP"
 
   source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-code-env") --dotfiles
 }
