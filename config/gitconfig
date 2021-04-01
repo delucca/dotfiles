@@ -89,9 +89,5 @@
   new = green bold
   whitespace = red reverse
 
-[url "git@github.com:"]
-  insteadOf = http://github.com/
-  insteadOf = https://github.com/
-
 [init]
   defaultBranch = main
