@@ -57,6 +57,7 @@ function setup_code_env {
   log_title "SETUP LOCAL"
 
   bootstrap_local
+}
 
 function bootstrap_local {
   log_title "BOOTSTRAP"
