@@ -42,28 +42,12 @@ function setup_codespaces {
   log_title "SETUP CODESPACES"
 
   bootstrap_codespaces
-  post_bootstrap_hook_codespaces
 }
 
 function bootstrap_codespaces {
   log_title "BOOTSTRAP"
 
   source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-codespaces")
-}
-
-function post_bootstrap_hook_codespaces {
-  log_title "POST BOOTSTRAP HOOK"
-
-  update_local_git_config
-}
-
-function update_local_git_config {
-  start_spinner_in_category 'git' 'Updating local git config'
-
-  rm -f "${HOME}/.gitconfig.local"
-  ln -s "${HOME}/.dotfiles/config/gitconfig.codespaces" "${HOME}/.gitconfig.local"
-
-  stop_spinner $?
 }
 
 # Setup local
