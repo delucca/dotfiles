@@ -38,8 +38,8 @@ export FZF_ALT_C_OPTS="
 "
 export FZF_DEFAULT_COMMAND="fd ${FZF_DEFAULT_COMMAND_OPTS}"
 
-# Spaceship
-export SPACESHIP_KUBECTL_SHOW='true'
+# Dotenv
+export ZSH_DOTENV_PROMPT=false
 
 # PATH
 export PATH="$PATH:$HOME/.local/bin"

@@ -10,7 +10,9 @@ fresh config/gitignore --file
 fresh config/termite --file=~/.config/termite/config
 
 # ZSH
+fresh config/zshrc.min --file
 fresh config/zshrc --file
+fresh config/zshenv.min --file
 fresh config/zshenv --file
 
 # Tmux
