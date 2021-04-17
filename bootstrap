@@ -42,9 +42,7 @@ function setup_codespaces {
 function bootstrap_codespaces {
   log_title "BOOTSTRAP"
 
-  curl -s "https://raw.githubusercontent.com/delucca/lazyscripts/1.0.2/bin/bootstrap-codespaces" -o "/tmp/bootstrap-codespaces"
-  chmod +x "/tmp/bootstrap-codespaces"
-  /tmp/bootstrap-codespaces
+  curl -s "https://raw.githubusercontent.com/delucca/lazyscripts/1.0.5/bin/bootstrap-codespaces" | bash -
 }
 
 # Setup local
@@ -59,10 +57,7 @@ function setup_code_env {
 function bootstrap_local {
   log_title "BOOTSTRAP"
 
-  curl -s "https://raw.githubusercontent.com/delucca/lazyscripts/1.0.2/bin/bootstrap-code-env" -o "/tmp/bootstrap-code-env"
-  chmod +x "/tmp/bootstrap-code-env"
-  /tmp/bootstrap-code-env --dotfiles
-
+  curl -s "https://raw.githubusercontent.com/delucca/lazyscripts/1.0.5/bin/bootstrap-code-env" | bash -s -- --dotfiles
 }
 
 # Execute
