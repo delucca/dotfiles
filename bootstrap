@@ -7,13 +7,8 @@
 # Imports
 # -------------------------------------------------------------------------------------------------
 
-IMPORT_COMMAND=${IMPORT_COMMAND:-"curl -s"}
-LAZYSCRIPTS_REPOSITORY_URL=${REPOSITORY_URL:-"https://raw.githubusercontent.com/delucca/lazyscripts"}
-LAZYSCRIPTS_REPOSITORY_BRANCH=${REPOSITORY_BRANCH:-"main"}
-
-source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/spinner.sh")
-source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/log.sh")
-source <(eval "${IMPORT_COMMAND}" "${LAZYSCRIPTS_REPOSITORY_URL}/${LAZYSCRIPTS_REPOSITORY_BRANCH}/helpers/validators.sh")
+source <(curl -s "https://raw.githubusercontent.com/delucca/shell-functions/1.0.1/modules/feedback.sh")
+source <(curl -s "https://raw.githubusercontent.com/delucca/shell-functions/1.0.1/modules/validation.sh")
 
 # Entrypoint
 # -------------------------------------------------------------------------------------------------
@@ -47,7 +42,9 @@ function setup_codespaces {
 function bootstrap_codespaces {
   log_title "BOOTSTRAP"
 
-  source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-codespaces")
+  curl -s "https://raw.githubusercontent.com/delucca/lazyscripts/1.0.2/bin/bootstrap-codespaces" -o "/tmp/bootstrap-codespaces"
+  chmod +x "/tmp/bootstrap-codespaces"
+  /tmp/bootstrap-codespaces
 }
 
 # Setup local
@@ -62,7 +59,10 @@ function setup_code_env {
 function bootstrap_local {
   log_title "BOOTSTRAP"
 
-  source <(eval "${IMPORT_COMMAND}" "${REPOSITORY_URL}/${REPOSITORY_BRANCH}/bin/bootstrap-code-env") --dotfiles
+  curl -s "https://raw.githubusercontent.com/delucca/lazyscripts/1.0.2/bin/bootstrap-code-env" -o "/tmp/bootstrap-code-env"
+  chmod +x "/tmp/bootstrap-code-env"
+  /tmp/bootstrap-code-env --dotfiles
+
 }
 
 # Execute

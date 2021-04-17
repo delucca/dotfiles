@@ -5,10 +5,6 @@
 
 current_emulator=$(pstree -sA $$)
 
-# Keychain
-zstyle :omz:plugins:keychain agents ssh
-zstyle :omz:plugins:keychain identities id
-
 # Compinit
 autoload -U compinit && compinit
 
@@ -41,7 +37,6 @@ zinit snippet "OMZ::plugins/git/git.plugin.zsh"
 zinit snippet "OMZ::plugins/git-extras/git-extras.plugin.zsh"
 zinit snippet "OMZ::plugins/kubectl/kubectl.plugin.zsh"
 zinit snippet "OMZ::plugins/dotenv/dotenv.plugin.zsh"
-zinit snippet "OMZ::plugins/keychain/keychain.plugin.zsh"
 zinit snippet "OMZ::plugins/fzf/fzf.plugin.zsh"
 
 # # Improving ZSH usage

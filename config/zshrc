@@ -5,8 +5,18 @@
 
 source "${HOME}/.zshrc.min"
 
+# Configure tools
+# -------------------------------------------------------------------------------------------------
+
+# Keychain
+zstyle :omz:plugins:keychain agents ssh
+zstyle :omz:plugins:keychain identities id
+
 # Load plugins
 # -------------------------------------------------------------------------------------------------
+
+# Loading snippets
+zinit snippet "OMZ::plugins/keychain/keychain.plugin.zsh"
 
 # # Improving ZSH usage
 zinit light "changyuheng/fz"
