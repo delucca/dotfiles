@@ -22,6 +22,7 @@ zinit snippet "OMZ::plugins/keychain/keychain.plugin.zsh"
 zinit light "changyuheng/fz"
 zinit light "tcnksm/docker-alias"
 zinit light "bonnefoa/kubectl-fzf"
+zinit light "lukechilds/zsh-nvm"
 
 # Post-plugin hook
 # -------------------------------------------------------------------------------------------------
