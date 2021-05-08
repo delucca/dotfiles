@@ -10,7 +10,13 @@ source "${HOME}/.zshrc.min"
 
 # Keychain
 zstyle :omz:plugins:keychain agents ssh
-zstyle :omz:plugins:keychain identities id
+zstyle :omz:plugins:keychain identities id_ed25519
+
+# Python pipx
+autoload -U bashcompinit
+bashcompinit
+
+eval "$(register-python-argcomplete pipx)"
 
 # Load plugins
 # -------------------------------------------------------------------------------------------------

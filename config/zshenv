@@ -21,3 +21,6 @@ export PMY_TRIGGER_KEY='^I'
 
 # Spaceship
 export SPACESHIP_KUBECTL_SHOW='true'
+
+# FZF
+export FZF_BASE='/home/git/junegunn/fzf'
