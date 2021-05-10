@@ -5,6 +5,7 @@
 "    -> Setup Vundle
 "    -> Setup plugins
 "    -> Appearance
+"    -> Plugin related
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -22,19 +23,27 @@ source $HOME/.vimrc.min
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Let Vundle manages Vundle
-Plugin 'VundleVim/Vundle.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Setup plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Theme
-Plugin 'joshdick/onedark.vim'
-
-" Finishes loading plugins
+call vundle#begin()
+  Plugin 'VundleVim/Vundle.vim'
+  Plugin 'joshdick/onedark.vim'
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'preservim/nerdtree'
+  Plugin 'junegunn/fzf'
+  Plugin 'tpope/vim-surround'
+  Plugin 'mileszs/ack.vim'
+  Plugin 'sheerun/vim-polyglot'
+  Plugin 'mhinz/vim-startify'
+  Plugin 'junegunn/goyo.vim'
+  Plugin 'amix/vim-zenroom2'
+  Plugin 'vim-scripts/bufexplorer.zip'
+  Plugin 'tpope/vim-commentary'
+  Plugin 'mg979/vim-visual-multi'
 call vundle#end()
+
 filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -48,3 +57,24 @@ if exists('+termguicolors')
 endif
 
 colorscheme onedark
+
+" Airline
+let g:airline_theme='onedark'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" FZF
+nnoremap <leader>f :FZF<CR>
+
+" ack
+nnoremap <leader>a :Ack 
+
+" Goyo/vim-zenroom-2
+nnoremap <silent> <leader>z :Goyo<cr>
