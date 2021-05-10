@@ -1,0 +1,9 @@
+name: bud
+
+windows:
+- execution-mode:
+    layout: main-vertical
+    root: /home/git/delucca/notebooks
+    panes:
+    - clear
+    - cleartree

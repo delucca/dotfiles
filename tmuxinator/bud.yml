@@ -3,14 +3,14 @@ name: bud
 windows:
 - execution-mode:
     layout: main-vertical
-    root: <%= ENV["CODEDIR"] %>/delucca/execution-mode
+    root: /home/git/delucca/workspaces/execution-mode
     panes:
     - clear
     - cleartree
 
 - business:
     layout: main-vertical
-    root: <%= ENV["CODEDIR"] %>/delucca/business
+    root: /home/git/delucca/workspaces/business
     panes:
     - clear
     - cleartree

@@ -24,3 +24,7 @@ fresh shell/functions/\*
 
 # Bin
 fresh bin/toggle-do-not-disturb --bin=~/.local/bin/toggle-do-not-disturb
+
+# vim
+fresh config/vimrc --file=~/.vimrc
+fresh config/vimrc.min --file=~/.vimrc.min

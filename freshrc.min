@@ -13,3 +13,6 @@ fresh config/zshenv.min --file=~/.zshenv
 # Shell
 fresh shell/aliases/\*
 fresh shell/functions/\*
+
+# vim
+fresh config/vimrc.min --file=~/.vimrc
