@@ -55,3 +55,6 @@ export PATH="$PATH:/var/lib/snapd/snap/bin"
 export PATH="$PATH:/snap/bin"
 export PATH="$PATH:$HOME/.poetry/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# Local configs
+LOCAL_ENV="${HOME}/.zshenv.local";[ -f "${LOCAL_ENV}" ] && source "${LOCAL_ENV}"
