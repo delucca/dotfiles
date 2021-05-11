@@ -6,9 +6,6 @@ fresh config/gitconfig --file
 fresh config/gitcommit --file
 fresh config/gitignore --file
 
-# Termite
-fresh config/termite --file=~/.config/termite/config
-
 # ZSH
 fresh config/zshrc.min --file
 fresh config/zshrc --file
@@ -28,3 +25,6 @@ fresh bin/toggle-do-not-disturb --bin=~/.local/bin/toggle-do-not-disturb
 # vim
 fresh config/vimrc --file=~/.vimrc
 fresh config/vimrc.min --file=~/.vimrc.min
+
+# Alacritty
+fresh config/alacritty.yml --file

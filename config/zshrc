@@ -34,6 +34,6 @@ zinit light "lukechilds/zsh-nvm"
 # -------------------------------------------------------------------------------------------------
 
 # Autoload tmux
-if [ -z "$TMUX" ] && [[ $current_emulator == *"termite"* ]]; then
+if [ -z "$TMUX" ] && [[ $current_emulator == *"alacritty"* ]]; then
   tmuxinator start default
 fi
