@@ -11,4 +11,4 @@ windows:
     layout: main-vertical
     root: /home/git/swar/Swar-Chia-Plot-Manager
     panes:
-    - clear
+    - . ./venv/bin/activate && clear && python manager.py view
