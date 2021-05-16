@@ -6,11 +6,9 @@ windows:
     root: /home/git/delucca/workspaces/execution-mode
     panes:
     - clear
-    - cleartree
 
 - business:
     layout: main-vertical
     root: /home/git/delucca/workspaces/business
     panes:
     - clear
-    - cleartree

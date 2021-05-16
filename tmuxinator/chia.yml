@@ -1,0 +1,14 @@
+name: chia
+
+windows:
+- farmer:
+    layout: main-vertical
+    root: /home/delucca/chia/hpool
+    panes:
+    - clear && ./hpool-miner-chia
+
+- plotter:
+    layout: main-vertical
+    root: /home/git/swar/Swar-Chia-Plot-Manager
+    panes:
+    - clear

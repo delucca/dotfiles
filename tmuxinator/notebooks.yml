@@ -1,4 +1,4 @@
-name: bud
+name: notebooks
 
 windows:
 - execution-mode:
@@ -6,4 +6,4 @@ windows:
     root: /home/git/delucca/notebooks
     panes:
     - clear
-    - cleartree
+    - poetry run jupyter notebook
