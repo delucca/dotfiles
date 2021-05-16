@@ -1,9 +1,8 @@
 name: notebooks
 
 windows:
-- execution-mode:
+- jupyter:
     layout: main-vertical
     root: /home/git/delucca/notebooks
     panes:
-    - clear
-    - poetry run jupyter notebook
+    - clear && poetry run jupyter notebook
