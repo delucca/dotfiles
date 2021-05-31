@@ -28,3 +28,6 @@ fresh config/vimrc.min --file=~/.vimrc.min
 
 # Alacritty
 fresh config/alacritty.yml --file
+
+# Idea Vim
+fresh config/ideavimrc --file
