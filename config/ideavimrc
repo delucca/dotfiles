@@ -1,1 +1,3 @@
+set NERDTree
+
 inoremap jj <Esc>
