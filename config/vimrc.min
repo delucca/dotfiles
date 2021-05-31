@@ -47,6 +47,9 @@ nmap <leader>q :q!<cr>
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
+# Sets yank to use clipboard
+set clipboard=unnamedplus
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
