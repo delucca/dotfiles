@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-function fzf-history-widget-accept {
+function fzf_history_widget_accept {
   fzf-history-widget
   zle accept-line
 }
 
-zle -N fzf-history-widget-accept
-bindkey '^X^R' fzf-history-widget-accept
+zle -N fzf_history_widget_accept
+bindkey '^X^R' fzf_history_widget_accept
