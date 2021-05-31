@@ -11,9 +11,6 @@ autoload -U compinit && compinit
 # Fresh
 source ~/.fresh/build/shell.sh
 
-# FZF
-source ~/.fzf.zsh
-
 # Load plugins
 # -------------------------------------------------------------------------------------------------
 
