@@ -3,25 +3,21 @@ name: chia
 windows:
 - farmer:
     layout: main-vertical
-    root: /home/delucca/chia/hpool
     panes:
-    - clear && ./hpool-miner-chia
+    - screen -r chia-farmer
 
 - plotter@local:
     layout: main-vertical
-    root: /home/git/swar/Swar-Chia-Plot-Manager
     panes:
-    - . ./venv/bin/activate && clear && python manager.py view
+    - screen -r chia-plotter
 
 - plotter@rig-ff:
     layout: main-vertical
-    root: /home/delucca
     panes:
-    - ssh xch_farm_ff_001@10.0.0.17 
+    - psff
 
 - plotter@rig-blz:
     layout: main-vertical
-    root: /home/delucca
     panes:
-    - ssh xch_farm_blz_001@10.0.0.18
+    - psblz
 
