@@ -9,7 +9,7 @@ source "${HOME}/.zshrc.min"
 # -------------------------------------------------------------------------------------------------
 
 # Keychain
-zstyle :omz:plugins:keychain agents ssh
+zstyle :omz:plugins:keychain agents ssh,gpg
 zstyle :omz:plugins:keychain identities id_ed25519
 
 # Python pipx

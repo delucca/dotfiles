@@ -8,8 +8,9 @@ windows:
 
 - plotter@local:
     layout: main-vertical
+    root: /home/delucca/.local/src/chia-plotter
     panes:
-    - screen -r chia-plotter
+    - ./venv/bin/python manager.py view
 
 - plotter@rig-ff:
     layout: main-vertical

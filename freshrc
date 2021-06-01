@@ -31,3 +31,6 @@ fresh config/alacritty.yml --file
 
 # Idea Vim
 fresh config/ideavimrc --file
+
+# GNUPG
+fresh config/gpg-agent.conf --file ~/.gnupg/gpg-agent.conf
