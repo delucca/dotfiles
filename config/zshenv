@@ -10,9 +10,6 @@ export TMUXINATOR_CONFIG="${HOME}/.dotfiles/tmuxinator"
 # GPG
 export GPG_TTY=$(tty)
 
-# Go
-export GOROOT=/home/delucca/Go
-
 # Minikube
 export MINIKUBE_HOME='/home/minikube'
 
