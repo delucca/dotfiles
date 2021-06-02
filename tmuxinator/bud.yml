@@ -3,12 +3,12 @@ name: bud
 windows:
 - execution-mode:
     layout: main-vertical
-    root: /home/delucca/Git/delucca/workspaces/execution-mode
+    root: /home/delucca/Repositories/delucca/workspaces/execution-mode
     panes:
     - clear
 
 - business:
     layout: main-vertical
-    root: /home/delucca/Git/delucca/workspaces/business
+    root: /home/delucca/Repositories/delucca/workspaces/business
     panes:
     - clear

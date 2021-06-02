@@ -3,7 +3,6 @@ name: vink-front-end
 windows:
 - code:
     layout: main-vertical
-    root: <%= ENV["CODEDIR"] %>/vink-sa/conciliador-frontend
+    root: /home/delucca/Repositories/vink-sa/conciliador-frontend
     panes:
     - clear
-    - cleartree

@@ -3,6 +3,6 @@ name: notebooks
 windows:
 - jupyter:
     layout: main-vertical
-    root: /home/git/delucca/notebooks
+    root: /home/delucca/Repositories/delucca/notebooks
     panes:
     - clear && poetry run jupyter notebook
