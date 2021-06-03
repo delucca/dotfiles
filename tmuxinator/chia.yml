@@ -8,17 +8,17 @@ windows:
 
 - plotter@local:
     layout: main-vertical
-    root: /home/delucca/.local/src/chia-plotter
+    root: /home/delucca/.local/src/chia-harvester
     panes:
     - ./venv/bin/python manager.py view
 
 - plotter@rig-ff:
     layout: main-vertical
     panes:
-    - psff
+    - hsff
 
 - plotter@rig-blz:
     layout: main-vertical
     panes:
-    - psblz
+    - hsblz
 
