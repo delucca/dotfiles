@@ -1,7 +1,13 @@
 name: chia
 
 windows:
-- farmer:
+- operator:
+    layout: main-vertical
+    root: /home/delucca/Repositories/delucca/rigs
+    panes:
+    - clear
+
+- farmer@local:
     layout: main-vertical
     panes:
     - screen -r chia-farmer
