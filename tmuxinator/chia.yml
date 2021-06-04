@@ -16,7 +16,7 @@ windows:
     layout: main-vertical
     root: /home/delucca/.local/src/chia-harvester
     panes:
-    - ./venv/bin/python manager.py view
+    - harvester view
 
 - plotter@rig-ff:
     layout: main-vertical
