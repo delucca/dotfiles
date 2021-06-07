@@ -1,3 +1,4 @@
 set NERDTree
 
 inoremap jj <Esc>
+map <leader>n <Action>(NERDTreeToggle)
