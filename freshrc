@@ -18,6 +18,7 @@ fresh config/tmux.conf --file
 # Shell
 fresh shell/aliases/\*
 fresh shell/functions/\*
+fresh shell/bin/\* --bin
 
 # Bin
 fresh bin/toggle-do-not-disturb --bin=~/.local/bin/toggle-do-not-disturb
