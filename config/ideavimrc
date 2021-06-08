@@ -74,10 +74,6 @@ nnoremap <leader>/ :nohls<return><esc>
 " Fast exit from input mode
 inoremap jj <ESC>
 
-" Fast navigation between tabs (next and previous)
-map <leader>l gt
-map <leader>h gT
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
