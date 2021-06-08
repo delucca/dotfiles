@@ -19,9 +19,6 @@ fresh config/tmux.conf --file
 fresh shell/aliases/\*
 fresh shell/functions/\*
 
-# Bin
-fresh bin/toggle-do-not-disturb --bin=~/.local/bin/toggle-do-not-disturb
-
 # vim
 fresh config/vimrc --file=~/.vimrc
 fresh config/vimrc.min --file=~/.vimrc.min
@@ -36,4 +33,4 @@ fresh config/ideavimrc --file
 fresh config/gpg-agent.conf --file ~/.gnupg/gpg-agent.conf
 
 # Bin
-fresh shell/bin/toggle-dnd --bin=~/.local/bin/toggle-dnd
+fresh bin/toggle-dnd --bin=~/.local/bin/toggle-dnd

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-KEY='/io/elementary/notifications/do-not-disturb'
-dconf write $KEY $(if [ $(dconf read $KEY) = 'true' ]; then echo false; else echo true; fi)

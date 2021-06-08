@@ -15,6 +15,10 @@ set clipboard=unnamedplus
 set commentary
 set surround
 
+" No annoying error sounds
+set visualbell
+set noerrorbells
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User interface
@@ -91,12 +95,23 @@ nnoremap <leader>nc :NERDTreeClose<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IDEA related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Task related
+nmap <leader><ESC> :action Stop<CR>
+
+" Goto shortcuts
 nmap <leader>f :action GotoFile<CR>
 nmap <leader>s :action GotoSymbol<CR>
 nmap <leader>x :action GotoAction<CR>
+
+" Usage and definitions
 nmap <leader>gu :action ShowUsages<CR>
 nmap <leader>gi :action GotoImplementation<CR>
 nmap <leader>gs :action GotoSuperMethod<CR>
 
+" Refactor
 nmap <leader>rr :action RenameElement<CR>
 nmap <leader>rm :action Move<CR>
+
+" Debug
+nmap <leader>dd :action Debug<CR>
+nmap <leader>db :action ToggleLineBreakpoint<CR>
