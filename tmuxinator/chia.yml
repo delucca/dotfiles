@@ -14,9 +14,9 @@ windows:
 
 - plotter@local:
     layout: main-vertical
-    root: /home/delucca/.local/src/chia-harvester
+    root: /home/delucca/.local/src/chia-harvest-manager
     panes:
-    - harvester view
+    - harvest-manager view
 
 - plotter@rig-ff:
     layout: main-vertical
