@@ -776,7 +776,7 @@
     },
     "Blacklist": {
       "odelucca": {
-        "blacklist": "trello,whimsical,photopea,mail.google,quintoandar.atlassian,feedly.com,drive.google,keep.google,notion,typing.com,calendar.google,github,protonmail,draw.io,atlassian,duckduckgo,getpocket.com,gather.town"
+        "blacklist": "trello,whimsical,photopea,mail.google,quintoandar.atlassian,feedly.com,drive.google,keep.google,notion,typing.com,calendar.google,github,protonmail,draw.io,atlassian,duckduckgo,getpocket.com,gather.town,localhost:8888/notebooks,miro.com,mural.co"
       }
     }
   }
