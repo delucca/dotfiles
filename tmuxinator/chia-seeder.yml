@@ -1,0 +1,8 @@
+name: chia-seeder
+
+windows:
+- src:
+    layout: main-vertical
+    root: /home/delucca/Repositories/delucca/chia-seeder
+    panes:
+    - clear
