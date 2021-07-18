@@ -8,10 +8,6 @@ source "${HOME}/.zshrc.min"
 # Configure tools
 # -------------------------------------------------------------------------------------------------
 
-# Keychain
-zstyle :omz:plugins:keychain agents ssh gpg
-zstyle :omz:plugins:keychain identities id_ed25519 8B16AEF0F25860748C377401AEDAC7BD6EE942CB
-
 # Python pipx
 autoload -U bashcompinit
 bashcompinit
