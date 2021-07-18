@@ -2,7 +2,8 @@
 fresh freshshell/fresh bin/fresh --bin=~/.local/bin/fresh
 
 # Git
-fresh config/gitconfig --file
+fresh config/gitconfig --file=~/.gitconfig
+fresh ../.gitconfig.local --file=~/.gitconfig
 fresh config/gitcommit --file
 fresh config/gitignore --file
 
@@ -30,6 +31,7 @@ fresh config/alacritty.yml --file
 fresh config/ideavimrc --file
 
 # GNUPG
+fresh config/gpg.conf --file ~/.gnupg/gpg.conf
 fresh config/gpg-agent.conf --file ~/.gnupg/gpg-agent.conf
 
 # Bin
