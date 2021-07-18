@@ -30,9 +30,12 @@ fresh config/alacritty.yml --file
 # Idea Vim
 fresh config/ideavimrc --file
 
-# GNUPG
+# GPG
 fresh config/gpg.conf --file ~/.gnupg/gpg.conf
 fresh config/gpg-agent.conf --file ~/.gnupg/gpg-agent.conf
 
 # Bin
 fresh bin/toggle-dnd --bin=~/.local/bin/toggle-dnd
+
+# SSH
+fresh config/ssh --file ~/.ssh/config
