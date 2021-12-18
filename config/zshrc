@@ -8,10 +8,12 @@ source "${HOME}/.zshrc.min"
 # Configure tools
 # -------------------------------------------------------------------------------------------------
 
-# GPG and SSH keychain config
+# GPG keychain config
 export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
 gpg-connect-agent updatestartuptty /bye > /dev/null
+
+# SSH keychain config
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
 
 # AWS
 autoload bashcompinit
@@ -25,9 +27,6 @@ eval "$(register-python-argcomplete pipx)"
 
 # Load plugins
 # -------------------------------------------------------------------------------------------------
-
-# Loading snippets
-zinit snippet "OMZ::plugins/keychain/keychain.plugin.zsh"
 
 # # Improving ZSH usage
 zinit light "changyuheng/fz"
