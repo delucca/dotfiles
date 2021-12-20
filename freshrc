@@ -6,6 +6,7 @@ fresh config/gitconfig --file=~/.gitconfig
 fresh ../.gitconfig.local --file=~/.gitconfig
 fresh config/gitcommit --file
 fresh config/gitignore --file
+fresh gittemplate --file=~/.gittemplate/
 
 # ZSH
 fresh config/zshrc.min --file

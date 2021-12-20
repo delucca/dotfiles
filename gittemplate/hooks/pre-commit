@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Resets Yubikey and GPG agents while https://github.com/go-piv/piv-go/issues/47 isn't solved
+killall -HUP yubikey-agent
+gpgconf --kill gpg-agent
