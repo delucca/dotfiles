@@ -13,7 +13,7 @@ function ff_s3ql_ls() {
 }
 
 function ff_s3ql_fsck() {
-  ssh -t ubuntu@fonsecafloriano.com 'sudo fsck.s3ql '
+  ssh -t ubuntu@fonsecafloriano.com 'sudo fsck.s3ql s3c://s3.wasabisys.com:443/bucket.fonsecafloriano.com --force'
 }
 
 function ff_docker_up() {
