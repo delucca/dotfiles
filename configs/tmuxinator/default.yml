@@ -6,6 +6,4 @@ windows:
     layout: main-vertical
     panes:
     - clear
-    - btm
-
-- logs: journalctl -f
+    - clear

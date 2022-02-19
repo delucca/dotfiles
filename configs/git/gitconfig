@@ -88,4 +88,3 @@
 
 [init]
   defaultBranch = main
-  templatedir = ~/.gittemplate
