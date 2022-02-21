@@ -38,7 +38,7 @@
 
 ;;
 ;; FONTS
-(setq doom-font (font-spec :family "Hasklig" :size 11))
+(setq doom-font (font-spec :family "Fira Code" :size 11))
 
 ;;
 ;; EDITOR
