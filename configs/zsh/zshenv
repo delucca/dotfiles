@@ -23,4 +23,4 @@ export SPACESHIP_KUBECTL_SHOW='true'
 export FZF_BASE='/home/git/junegunn/fzf'
 
 # WSL
-export WHOME='/mnt/c/delucca'
+export WHOME='/mnt/c/Users/delucca'
