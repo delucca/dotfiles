@@ -28,3 +28,7 @@ fi
 
 unset wsl2_ssh_pageant_bin
 unset gpg_config_path
+
+# Homebrew
+###################################################################################################
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
