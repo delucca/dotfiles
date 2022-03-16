@@ -24,3 +24,7 @@ export FZF_BASE='/home/git/junegunn/fzf'
 
 # WSL
 export WHOME='/mnt/c/Users/delucca'
+
+# Pyenv
+export PYENV_VERSION="3.10.2"
+export PYENV_ROOT="$HOME/.pyenv"  
