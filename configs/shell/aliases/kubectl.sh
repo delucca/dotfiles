@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 alias kc='kubectl'
-alias kx='kubectx'
+alias kx='kubectl ctx'
 alias klf='kubectl logs --tail=200  -f'
 alias kgs='kubectl get service -o wide'
 alias kgd='kubectl get deployment -o wide'
