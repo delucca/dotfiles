@@ -19,6 +19,9 @@ set surround
 set visualbell
 set noerrorbells
 
+" Set relative line numbers
+set relativenumber
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User interface
