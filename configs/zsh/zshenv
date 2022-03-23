@@ -28,3 +28,6 @@ export WHOME='/mnt/c/Users/delucca'
 # Pyenv
 export PYENV_VERSION="3.10.2"
 export PYENV_ROOT="$HOME/.pyenv"  
+
+# Rigs
+export IP_XCHRIG="10.243.80.12"
