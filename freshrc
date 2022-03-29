@@ -2,8 +2,9 @@
 fresh freshshell/fresh bin/fresh --bin=~/.local/bin/fresh
 
 # Git
-fresh configs/git/gitconfig --file=~/.gitconfig
 fresh ../.gitconfig.local --file=~/.gitconfig
+fresh configs/git/gitconfig --file=~/.gitconfig
+fresh configs/git/gitconfig.trilon --file=~/.gitconfig.trilon
 fresh configs/git/gitcommit --file
 fresh configs/git/gitignore --file
 

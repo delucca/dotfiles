@@ -1,0 +1,8 @@
+name: plato
+
+windows:
+- api:
+    layout: main-vertical
+    root: /home/delucca/src/trilon/plato/plato-api
+    panes:
+    - clear
