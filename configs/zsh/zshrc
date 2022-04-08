@@ -15,8 +15,10 @@ bashcompinit
 # Python pipx
 autoload -U bashcompinit
 bashcompinit
-
 eval "$(register-python-argcomplete pipx)"
+
+# Java
+eval "$(jenv init -)"
 
 # Load plugins
 # -------------------------------------------------------------------------------------------------
