@@ -89,5 +89,9 @@
 [init]
   defaultBranch = main
 
+
+[url "git@github.com:"]
+        insteadOf = <https://github.com/>
+
 [includeIf "gitdir:~/src/trilon/"]
   path = ~/.gitconfig.trilon
