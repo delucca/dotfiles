@@ -1,0 +1,14 @@
+name: bud
+
+windows:
+- execution-mode:
+    layout: main-vertical
+    root: /home/delucca/src/delucca/workspaces/execution-mode
+    panes:
+    - clear
+
+- business:
+    layout: main-vertical
+    root: /home/delucca/src/delucca/workspaces/business
+    panes:
+    - clear

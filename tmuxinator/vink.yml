@@ -1,8 +1,0 @@
-name: vink-front-end
-
-windows:
-- code:
-    layout: main-vertical
-    root: /home/delucca/Repositories/vink-sa/conciliador-frontend
-    panes:
-    - clear

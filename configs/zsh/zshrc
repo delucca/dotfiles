@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+# Extend min config
+# -------------------------------------------------------------------------------------------------
+
+source "${HOME}/.zshrc.min"
+
+# Configure tools
+# -------------------------------------------------------------------------------------------------
+
+# AWS
+autoload bashcompinit
+bashcompinit
+
+# Python pipx
+autoload -U bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete pipx)"
+
+# Java
+eval "$(jenv init -)"
+
+# Load plugins
+# -------------------------------------------------------------------------------------------------
+
+# Improving ZSH usage
+zi light "changyuheng/fz"
+zi light "tcnksm/docker-alias"
+zi light "bonnefoa/kubectl-fzf"
+zi light "lukechilds/zsh-nvm"
+
+# Post-plugin hook
+# -------------------------------------------------------------------------------------------------
+
+# Autoload tmux
+if [ -z "$TMUX" ]; then
+  tmuxinator start default
+fi

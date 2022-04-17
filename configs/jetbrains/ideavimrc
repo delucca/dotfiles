@@ -1,0 +1,116 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Binds leader to space
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+" Sets how many lines of history VIM has to remember
+set history=500
+
+" Sets yank to use clipboard
+set clipboard=unnamedplus
+
+" Emulate vim surround plugin
+set commentary
+set surround
+
+" No annoying error sounds
+set visualbell
+set noerrorbells
+
+" Set relative line numbers
+set relativenumber
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" User interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw 
+
+" For regular expressions turn magic on
+set magic
+
+" Show matching brackets when text indicator is over them
+set showmatch 
+
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" File management
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Fast quitting
+nmap <leader>q :q!<cr>
+
+" Don't lose selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+vnoremap = =gv
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Navigation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Removes highlight
+nnoremap <leader>/ :nohls<return><esc>
+
+" Fast exit from input mode
+inoremap jj <ESC>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Activate NERDTree
+set NERDTree
+
+" Open NERDTree
+nnoremap <leader>no :NERDTreeFocus<CR>
+
+" Close NERDTree
+nnoremap <leader>nc :NERDTreeClose<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" IDEA related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Task related
+nmap <leader><ESC> :action Stop<CR>
+
+" Goto shortcuts
+nmap <leader>f :action GotoFile<CR>
+nmap <leader>s :action GotoSymbol<CR>
+nmap <leader>x :action GotoAction<CR>
+
+" Usage and definitions
+nmap <leader>gu :action ShowUsages<CR>
+nmap <leader>gi :action GotoImplementation<CR>
+nmap <leader>gs :action GotoSuperMethod<CR>
+
+" Refactor
+nmap <leader>rr :action RenameElement<CR>
+nmap <leader>rm :action Move<CR>
+
+" Debug
+nmap <leader>dd :action Debug<CR>
+nmap <leader>db :action ToggleLineBreakpoint<CR>

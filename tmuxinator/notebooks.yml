@@ -1,8 +1,0 @@
-name: notebooks
-
-windows:
-- jupyter:
-    layout: main-vertical
-    root: /home/delucca/Repositories/delucca/notebooks
-    panes:
-    - clear && poetry run jupyter notebook

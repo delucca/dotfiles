@@ -2,41 +2,37 @@
 fresh freshshell/fresh bin/fresh --bin=~/.local/bin/fresh
 
 # Git
-fresh config/gitconfig --file=~/.gitconfig
-fresh ../.gitconfig.local --file=~/.gitconfig
-fresh config/gitcommit --file
-fresh config/gitignore --file
-fresh gittemplate --file=~/.gittemplate/
+fresh configs/git/gitconfig.local --file=~/.gitconfig
+fresh configs/git/gitconfig --file=~/.gitconfig
+fresh configs/git/gitconfig.local --file=~/.gitconfig.local
+fresh configs/git/gitconfig.trilon --file=~/.gitconfig.trilon
+fresh configs/git/gitcommit --file
+fresh configs/git/gitignore --file
 
 # ZSH
-fresh config/zshrc.min --file
-fresh config/zshrc --file
-fresh config/zshenv.min --file
-fresh config/zshenv --file
+fresh configs/zsh/zshrc.min --file
+fresh configs/zsh/zshrc --file
+fresh configs/zsh/zshenv.min --file
+fresh configs/zsh/zshenv --file
+fresh configs/zsh/zprofile --file
 
 # Tmux
-fresh config/tmux.conf --file
+fresh configs/tmux/tmux.conf --file
 
 # Shell
-fresh shell/aliases/\*
-fresh shell/functions/\*
+fresh configs/shell/aliases/\*
+fresh configs/shell/functions/\*
 
 # vim
-fresh config/vimrc --file=~/.vimrc
-fresh config/vimrc.min --file=~/.vimrc.min
-
-# Alacritty
-fresh config/alacritty.yml --file
+fresh configs/vim/vimrc --file=~/.vimrc
+fresh configs/vim/vimrc.min --file=~/.vimrc.min
 
 # Idea Vim
-fresh config/ideavimrc --file
-
-# GPG
-fresh config/gpg.conf --file ~/.gnupg/gpg.conf
-fresh config/gpg-agent.conf --file ~/.gnupg/gpg-agent.conf
-
-# Bin
-fresh bin/toggle-dnd --bin=~/.local/bin/toggle-dnd
+fresh configs/jetbrains/ideavimrc --file
 
 # SSH
-fresh config/ssh --file ~/.ssh/config
+fresh configs/ssh/config --file ~/.ssh/config
+
+# GPG
+fresh configs/gpg/gpg.conf --file ~/.gnupg/gpg.conf
+fresh configs/gpg/gpg-agent.conf --file ~/.gnupg/gpg-agent.conf
