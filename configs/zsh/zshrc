@@ -20,6 +20,9 @@ eval "$(register-python-argcomplete pipx)"
 # Java
 eval "$(jenv init -)"
 
+# Doppler
+source /usr/local/share/zsh/site-functions/_doppler
+
 # Load plugins
 # -------------------------------------------------------------------------------------------------
 
