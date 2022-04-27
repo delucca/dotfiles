@@ -3,7 +3,6 @@
   quotepath = false
   autocrlf = input
   safecrlf = warn
-  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [alias]
   br = branch
@@ -32,6 +31,7 @@
   app = commit -a --amend --no-edit
   cia = commit -a --amend
   up = remote update --prune
+  dft = difftool
 
 [apply]
   whitespace = nowarn
@@ -39,11 +39,17 @@
 [rerere]
   enabled = true
 
+[diff]
+  external = difft
+
 [difftool]
   prompt = false
 
-[diff]
-  tool = meld
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+  difftool = true
 
 [mergetool]
   prompt = false
@@ -72,23 +78,8 @@
 [color]
   ui = true
 
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
-
-[color "diff"]
-  meta = 11
-  frag = magenta bold
-  commit = yellow bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
-
 [init]
   defaultBranch = main
-
 
 [url "git@github.com:"]
         insteadOf = <https://github.com/>
