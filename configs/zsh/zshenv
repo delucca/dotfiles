@@ -31,3 +31,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 # Rigs
 export IP_XCHRIG="10.243.80.12"
+
+# Import local env
+source "${HOME}/.zshenv.local"

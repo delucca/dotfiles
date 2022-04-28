@@ -73,7 +73,7 @@
 
 [commit]
   gpgsign = true
-  template = .gitcommit
+  template = ~/.gitcommit
 
 [color]
   ui = true
