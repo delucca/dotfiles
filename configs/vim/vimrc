@@ -29,6 +29,8 @@ call vundle#begin()
   Plugin 'vim-scripts/bufexplorer.zip'
   Plugin 'tpope/vim-commentary'
   Plugin 'mg979/vim-visual-multi'
+  Plugin 'altercation/vim-colors-solarized'
+  Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 filetype plugin indent on
@@ -38,19 +40,22 @@ filetype plugin indent on
 " Appearance
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+" if exists('+termguicolors')
+"   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"   set termguicolors
+" endif
 
-colorscheme onedark
+" Theme
+colorscheme solarized
+set background=light
+let g:solarized_termcolors=256
 
 " Airline
-let g:airline_theme='onedark'
+let g:airline_theme='solarized'
 
 " Transparent background
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree

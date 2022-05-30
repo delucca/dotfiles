@@ -37,7 +37,7 @@
         "defaults": 
         {
             "acrylicOpacity": 0.92000000000000004,
-            "colorScheme": "One Dark",
+            "colorScheme": "Solarized Light",
             "font": 
             {
                 "face": "SFMono Nerd Font",
