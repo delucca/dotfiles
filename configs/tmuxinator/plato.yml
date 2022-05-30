@@ -6,3 +6,8 @@ windows:
     root: /home/delucca/src/trilon/plato/plato-api
     panes:
     - clear
+- packages:
+    layout: main-vertical
+    root: /home/delucca/src/trilon/plato/plato-packages
+    panes:
+    - clear

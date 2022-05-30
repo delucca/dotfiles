@@ -26,11 +26,14 @@ export FZF_BASE='/home/git/junegunn/fzf'
 export WHOME='/mnt/c/Users/delucca'
 
 # Pyenv
-export PYENV_VERSION="3.10.2"
+export PYENV_VERSION="3.10.4"
 export PYENV_ROOT="$HOME/.pyenv"  
 
 # Rigs
 export IP_XCHRIG="10.243.80.12"
+
+# WSL
+export DISPLAY=$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0
 
 # Import local env
 source "${HOME}/.zshenv.local"
