@@ -33,7 +33,6 @@ source /usr/local/share/zsh/site-functions/_bw
 zi light "changyuheng/fz"
 zi light "tcnksm/docker-alias"
 zi light "bonnefoa/kubectl-fzf"
-zi light "lukechilds/zsh-nvm"
 
 # Post-plugin hook
 # -------------------------------------------------------------------------------------------------
