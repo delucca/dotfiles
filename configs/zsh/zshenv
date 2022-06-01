@@ -35,5 +35,9 @@ export IP_XCHRIG="10.243.80.12"
 # WSL
 export DISPLAY=$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0
 
+# PNPM
+export PNPM_HOME="/home/delucca/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
 # Import local env
 source "${HOME}/.zshenv.local"
