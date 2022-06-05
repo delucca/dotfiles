@@ -13,22 +13,26 @@ It is pretty common for me to sync multiple devices. Also, it is a pain in the a
 
 ## 🤖 Getting Started
     
-My dotfiles are managed by [fresh].
+My dotfiles are managed by [chezmoi].
 
-To install those, you need to run:
-```
-./bootstrap
+After installing it, run the following command to apply my custom configurations to it:
+
+```bash
+ln -s ~/.dotfiles/configs/manual/chezmoi/chezmoi.toml ~/.config/chezmoi/chezmoi.toml
 ```
 
-Them, if you've installed the Fresh dotfiles manager, you can simply run:
+And them, finally, you can run the following: 
+
+```bash
+chezmoi apply
 ```
-fresh
-```
+
+And all my dotfiles will be properly installed.
 
 ## 🔓 License
 
 Distributed under the MIT License. See [`LICENSE`] for more information.
 
 
-[fresh]: http://freshshell.com
+[chezmoi]: https://www.chezmoi.io/
 [`LICENSE`]: LICENSE

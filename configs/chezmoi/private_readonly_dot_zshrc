@@ -2,11 +2,31 @@
 
 # Configure tools
 # -------------------------------------------------------------------------------------------------
+
 # Compinit
 autoload -U compinit && compinit
 
-# Fresh
-source ~/.fresh/build/shell.sh
+# AWS
+autoload bashcompinit
+bashcompinit
+
+# Python pipx
+autoload -U bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete pipx)"
+
+# Java
+eval "$(jenv init -)"
+
+# Doppler
+source /usr/local/share/zsh/site-functions/_doppler
+
+# Bitwarden
+source /usr/local/share/zsh/site-functions/_bw
+
+# Load custom functions and aliases
+source "${HOME}/.zfunctions"
+source "${HOME}/.zaliases"
 
 # Load plugins
 # -------------------------------------------------------------------------------------------------
@@ -15,6 +35,11 @@ source ~/.fresh/build/shell.sh
 source ${HOME}/.zi/bin/zi.zsh
 autoload -Uz _zi
 (( ${+_comps} )) && _comps[zi]=_zi
+
+# Load a few important annexes, without Turbo
+zi light-mode for \
+  z-shell/z-a-patch-dl \
+  z-shell/z-a-bin-gem-node
 
 # Load a few important annexes, without Turbo
 zi light-mode for \
@@ -33,7 +58,7 @@ zi snippet "OMZ::plugins/kubectl/kubectl.plugin.zsh"
 zi snippet "OMZ::plugins/dotenv/dotenv.plugin.zsh"
 zi snippet "OMZ::plugins/fzf/fzf.plugin.zsh"
 
-# # Improving ZSH usage
+# Improving ZSH usage
 zi light "chrissicool/zsh-256color"
 zi light "rupa/z"
 zi light "djui/alias-tips"
@@ -45,10 +70,13 @@ zi light "Tarrasch/zsh-bd"
 zi light "changyuheng/zsh-interactive-cd"
 zi light "shannonmoeller/up"
 zi light "Aloxaf/fzf-tab"
+zi light "changyuheng/fz"
+zi light "tcnksm/docker-alias"
+zi light "bonnefoa/kubectl-fzf"
 
 zi cdreplay -q
 
-# Autostart and post-plugin hook
+# Post-plugin hook
 # -------------------------------------------------------------------------------------------------
 
 # FZF-TAB
@@ -60,6 +88,11 @@ echo description: $desc
 '
 
 zstyle ':fzf-tab:complete:cat:argument-rest' fzf-preview '[[ $(file --mime-type $realpath) == *"text/"* ]] && cat $realpath'
+
+# Autoload tmux
+if [ -z "$TMUX" ]; then
+  tmuxinator start default
+fi
 
 # Load Starship
 eval "$(starship init zsh)"
