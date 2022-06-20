@@ -221,7 +221,7 @@ call vundle#begin()
   Plugin 'vim-scripts/bufexplorer.zip'
   Plugin 'tpope/vim-commentary'
   Plugin 'mg979/vim-visual-multi'
-  Plugin 'altercation/vim-colors-solarized'
+  Plugin 'dracula/vim',
   Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
@@ -261,12 +261,10 @@ set ffs=unix,dos,mac
 " endif
 
 " Theme
-colorscheme solarized
-set background=light
-let g:solarized_termcolors=256
+" colorscheme dracula
 
 " Airline
-let g:airline_theme='solarized'
+let g:airline_theme='dracula'
 
 " Transparent background
 " hi Normal guibg=NONE ctermbg=NONE

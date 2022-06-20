@@ -48,9 +48,6 @@ export TMUXINATOR_CONFIG="${HOME}/.tmuxinator"
 # GPG
 export GPG_TTY=$(tty)
 
-# Minikube
-export MINIKUBE_HOME='/home/minikube'
-
 # PMY
 export PMY_TRIGGER_KEY='^I'
 
@@ -71,7 +68,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export IP_XCHRIG="10.243.80.12"
 
 # WSL
-export DISPLAY=$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0
+# export DISPLAY=$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0
+export DISPLAY=':0'
+export BROWSER='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'
 
 # PNPM
 export PNPM_HOME="/home/delucca/.local/share/pnpm"

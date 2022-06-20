@@ -90,7 +90,7 @@ echo description: $desc
 zstyle ':fzf-tab:complete:cat:argument-rest' fzf-preview '[[ $(file --mime-type $realpath) == *"text/"* ]] && cat $realpath'
 
 # Autoload tmux
-if [ -z "$TMUX" ]; then
+if [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
   tmuxinator start default
 fi
 
