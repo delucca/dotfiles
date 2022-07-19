@@ -1,1 +1,5 @@
 sourceDir = "/home/delucca/.dotfiles/configs/chezmoi"
+encryption = "gpg"
+
+[gpg]
+  recipient = "3D919D86E30F08482759B20378C152CA626C94A0"
