@@ -3,6 +3,10 @@
 # Zinit
 export PLUGINS=$HOME/.zi/plugins
 
+# Yubikey
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
 # Interface in general
 export COMPLETION_WAITING_DOTS='true'
 
@@ -66,11 +70,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 
 # Rigs
 export IP_XCHRIG="10.243.80.12"
-
-# WSL
-# export DISPLAY=$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0
-export DISPLAY=':0'
-export BROWSER='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'
 
 # PNPM
 export PNPM_HOME="/home/delucca/.local/share/pnpm"
