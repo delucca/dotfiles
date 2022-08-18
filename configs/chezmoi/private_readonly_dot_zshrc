@@ -15,15 +15,6 @@ autoload -U bashcompinit
 bashcompinit
 eval "$(register-python-argcomplete pipx)"
 
-# Java
-eval "$(jenv init -)"
-
-# Doppler
-source /usr/local/share/zsh/site-functions/_doppler
-
-# Bitwarden
-source /usr/local/share/zsh/site-functions/_bw
-
 # Load custom functions and aliases
 source "${HOME}/.zfunctions"
 source "${HOME}/.zaliases"
