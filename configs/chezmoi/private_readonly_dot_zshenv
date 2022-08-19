@@ -1,7 +1,10 @@
 #!/usr/bin/env zsh
 
 # Zinit
-export PLUGINS=$HOME/.zi/plugins
+export PLUGINS="$HOME/.zi/plugins"
+
+# Editor
+export EDITOR="vim"
 
 # Yubikey
 export GPG_TTY="$(tty)"
