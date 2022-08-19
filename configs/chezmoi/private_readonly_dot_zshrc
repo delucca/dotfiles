@@ -37,6 +37,7 @@ zi light-mode for \
   z-shell/z-a-patch-dl \
   z-shell/z-a-bin-gem-node
 
+
 # Oh-my-zsh configs that I want
 zi snippet "OMZ::lib/completion.zsh"
 zi snippet "OMZ::lib/history.zsh"
@@ -45,11 +46,10 @@ zi snippet "OMZ::lib/theme-and-appearance.zsh"
 zi snippet "OMZ::lib/spectrum.zsh"
 zi snippet "OMZ::plugins/git/git.plugin.zsh"
 zi snippet "OMZ::plugins/git-extras/git-extras.plugin.zsh"
-zi snippet "OMZ::plugins/kubectl/kubectl.plugin.zsh"
 zi snippet "OMZ::plugins/dotenv/dotenv.plugin.zsh"
 zi snippet "OMZ::plugins/fzf/fzf.plugin.zsh"
 
-# Improving ZSH usage
+# # Improving ZSH usage
 zi light "chrissicool/zsh-256color"
 zi light "rupa/z"
 zi light "djui/alias-tips"
@@ -62,8 +62,6 @@ zi light "changyuheng/zsh-interactive-cd"
 zi light "shannonmoeller/up"
 zi light "Aloxaf/fzf-tab"
 zi light "changyuheng/fz"
-zi light "tcnksm/docker-alias"
-zi light "bonnefoa/kubectl-fzf"
 
 zi cdreplay -q
 
@@ -79,11 +77,6 @@ echo description: $desc
 '
 
 zstyle ':fzf-tab:complete:cat:argument-rest' fzf-preview '[[ $(file --mime-type $realpath) == *"text/"* ]] && cat $realpath'
-
-# Autoload tmux
-if [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
-  tmuxinator start default
-fi
 
 # Load Starship
 eval "$(starship init zsh)"

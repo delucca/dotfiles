@@ -58,12 +58,6 @@ export PMY_TRIGGER_KEY='^I'
 # Spaceship
 export SPACESHIP_KUBECTL_SHOW='true'
 
-# FZF
-export FZF_BASE='/home/git/junegunn/fzf'
-
-# WSL
-export WHOME='/mnt/c/Users/delucca'
-
 # Pyenv
 export PYENV_VERSION="3.10.4"
 export PYENV_ROOT="$HOME/.pyenv"  
