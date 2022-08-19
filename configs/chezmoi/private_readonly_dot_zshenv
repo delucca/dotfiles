@@ -68,6 +68,9 @@ export IP_XCHRIG="10.243.80.12"
 # PNPM
 export PNPM_HOME="/home/delucca/.local/share/pnpm"
 
+# VOLTA
+export VOLTA_HOME="/home/delucca/.volta"
+
 # PATH
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/local/bin"
@@ -86,3 +89,4 @@ export PATH="$PATH:${KREW_ROOT:-$HOME/.krew}/bin"
 export PATH="$PATH:$PYENV_ROOT/bin"
 export PATH="$PATH:$PNPM_HOME"
 export PATH="$PATH:/usr/local/cuda/bin"
+export PATH="$PATH:$VOLTA_HOME/bin"
