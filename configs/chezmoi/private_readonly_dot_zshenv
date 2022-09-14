@@ -48,13 +48,6 @@ export FZF_DEFAULT_COMMAND="fd ${FZF_DEFAULT_COMMAND_OPTS}"
 # Dotenv
 export ZSH_DOTENV_PROMPT=false
 
-# TMUX
-export DISABLE_AUTO_TITLE='true'
-export TMUXINATOR_CONFIG="${HOME}/.tmuxinator"
-
-# GPG
-export GPG_TTY=$(tty)
-
 # PMY
 export PMY_TRIGGER_KEY='^I'
 
@@ -73,6 +66,9 @@ export PNPM_HOME="/home/delucca/.local/share/pnpm"
 
 # VOLTA
 export VOLTA_HOME="/home/delucca/.volta"
+
+# ZELLIJ
+export ZELLIJ_CONFIG_DIR="/home/delucca/.zellij"
 
 # PATH
 export PATH="$PATH:$HOME/.local/bin"

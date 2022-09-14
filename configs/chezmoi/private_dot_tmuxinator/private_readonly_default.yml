@@ -1,9 +1,0 @@
-name: default
-root: ~/
-
-windows:
-- main:
-    layout: main-vertical
-    panes:
-    - clear
-    - clear
