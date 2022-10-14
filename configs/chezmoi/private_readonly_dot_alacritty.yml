@@ -67,4 +67,4 @@ colors:
 
 key_bindings:
   - { key: Space, mods: Control, mode: ~Search, action: ToggleViMode }
-  - { key: F, mods: Control, action: ToggleFullscreen }
+  - { key: F, mods: Alt, action: ToggleFullscreen }
