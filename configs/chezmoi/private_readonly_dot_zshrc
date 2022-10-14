@@ -82,7 +82,7 @@ zstyle ':fzf-tab:complete:cat:argument-rest' fzf-preview '[[ $(file --mime-type 
 eval "$(starship init zsh)"
 
 # Start Zellij
-if [[ -z "$ZELLIJ" ]]; then
+if [[ -z "$ZELLIJ" && -z "$TERMINAL_EMULATOR" ]]; then
   if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
     zellij attach -c
   else

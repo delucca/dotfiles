@@ -22,3 +22,7 @@ alias v='xclip -sel clip -o'
 alias cleartree='clear && tree -L 2'
 alias vim='gvim -v'
 alias tf='terraform'
+
+# Node
+# -------------------------------------------------------------------------------------------------
+alias pn='pnpm'
