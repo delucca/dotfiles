@@ -10,3 +10,9 @@ Plug 'microsoft/vscode-js-debug', { 'do': 'npm install --legacy-peer-deps && npm
 
 " Text editing
 Plug 'matze/vim-move'
+
+" Autocomplete
+Plug 'github/copilot.vim'
+
+" Markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }

@@ -27,6 +27,7 @@ return {
 
   -- text editing
   ["p"] = { '"_dP', "Avoid copying replaced context after pasting", mode = "v" },
+  ["<leader>/"] = { "<cmd>nohls<cr>", "Removes current highlight" },
 
   -- nvim-tree-toggle
   ["<leader>eo"] = { "<cmd>NvimTreeToggle<cr>", "Open file explorer" },
@@ -35,4 +36,8 @@ return {
   ["<leader>fs"] = { "<cmd>w<cr>", "Save file" },
   ["<leader>fq"] = { "<cmd>qa<cr>", "Close file" },
   ["<leader>fQ"] = { "<cmd>wqa<cr>", "Save and close file" },
+
+  -- completions
+  ["<c-j>"] = { 'coc#pum#visible() ? coc#pum#next(1) : "<c-j>"', "Navigate down on Coc list", mode = "i", expr = true },
+  ["<c-k>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<c-k>"', "Navigate up on Coc list", mode = "i", expr = true },
 }
