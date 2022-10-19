@@ -41,6 +41,7 @@ return {
   ["<c-j>"] = { 'coc#pum#visible() ? coc#pum#next(1) : "<c-j>"', "Navigate down on Coc list", mode = "i", expr = true },
   ["<c-k>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<c-k>"', "Navigate up on Coc list", mode = "i", expr = true },
   ["gd"] = { "<cmd>call CocAction('jumpDefinition')<cr>", "Go to definition" },
+  ["G"] = { "<cmd>call CocAction('diagnosticInfo')<cr>", "Show diagnostic" },
 
   -- telescope
   ["<leader>f"] = { "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", "Find files" },

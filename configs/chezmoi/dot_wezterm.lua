@@ -8,7 +8,7 @@ end)
 
 return {
   font = wezterm.font 'MonoLisa',
-  font_size = 12.0,
+  font_size = 11.5,
   color_scheme = 'Catppuccin Mocha',
   window_background_opacity = 0.99,
   hide_tab_bar_if_only_one_tab = true,

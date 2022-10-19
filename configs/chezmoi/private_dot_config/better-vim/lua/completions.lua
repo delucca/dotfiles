@@ -1,8 +1,3 @@
-local check_backspace = function()
-  local col = vim.fn.col "." - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
-end
-
 vim.g.coc_global_extensions = {
   'coc-lists',
   'coc-snippets',
@@ -10,7 +5,7 @@ vim.g.coc_global_extensions = {
   'coc-tsserver',
   'coc-prettier',
   'coc-eslint',
-  'coc-tslint',
+  'coc-tslint-plugin',
   'coc-highlight',
   'coc-sumneko-lua',
   'coc-sh',
