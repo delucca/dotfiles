@@ -4,7 +4,7 @@
 export PLUGINS="$HOME/.zi/plugins"
 
 # Editor
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Yubikey
 export GPG_TTY="$(tty)"

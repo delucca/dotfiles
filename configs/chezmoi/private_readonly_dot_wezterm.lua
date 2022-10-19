@@ -7,7 +7,11 @@ wezterm.on('gui-startup', function(cmd)
 end)
 
 return {
-  font = wezterm.font 'MonoLisa',
+  font = wezterm.font_with_fallback {
+    'MonoLisa',
+    'Noto Color Emoji',
+    'PowerlineExtraSymbols',
+  },
   font_size = 11.5,
   color_scheme = 'Catppuccin Mocha',
   window_background_opacity = 0.99,
