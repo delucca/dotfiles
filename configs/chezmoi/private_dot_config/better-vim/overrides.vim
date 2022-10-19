@@ -6,6 +6,7 @@ lua << EOF
     'navigation',
     'package-management',
     'completions',
+    'syntax-highlighting',
   }
 
   for _, config in ipairs(active_configs) do

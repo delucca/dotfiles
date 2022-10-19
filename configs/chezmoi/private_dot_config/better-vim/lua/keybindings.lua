@@ -33,11 +33,17 @@ return {
   ["<leader>eo"] = { "<cmd>NvimTreeToggle<cr>", "Open file explorer" },
 
   -- file control
-  ["<leader>fs"] = { "<cmd>w<cr>", "Save file" },
-  ["<leader>fq"] = { "<cmd>qa<cr>", "Close file" },
-  ["<leader>fQ"] = { "<cmd>wqa<cr>", "Save and close file" },
+  ["<leader>qs"] = { "<cmd>w<cr>", "Save file" },
+  ["<leader>qq"] = { "<cmd>qa<cr>", "Close file" },
+  ["<leader>qQ"] = { "<cmd>wqa<cr>", "Save and close file" },
 
   -- completions
   ["<c-j>"] = { 'coc#pum#visible() ? coc#pum#next(1) : "<c-j>"', "Navigate down on Coc list", mode = "i", expr = true },
   ["<c-k>"] = { 'coc#pum#visible() ? coc#pum#prev(1) : "<c-k>"', "Navigate up on Coc list", mode = "i", expr = true },
+  ["gd"] = { "<cmd>call CocAction('jumpDefinition')<cr>", "Go to definition" },
+
+  -- telescope
+  ["<leader>f"] = { "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", "Find files" },
+  ["<leader>ts"] = { "<cmd>Telescope coc workspace_symbols<cr>", "Find symbols in workspace" },
+  ["<leader>tS"] = { "<cmd>Telescope coc document_symbols<cr>", "Find symbols in document" },
 }

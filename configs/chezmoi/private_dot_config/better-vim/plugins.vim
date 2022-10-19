@@ -1,5 +1,6 @@
 " Navigation
 Plug 'max397574/better-escape.nvim'
+Plug 'nvim-telescope/telescope-media-files.nvim'
 
 " Debugging
 Plug 'mfussenegger/nvim-dap'
@@ -11,8 +12,12 @@ Plug 'microsoft/vscode-js-debug', { 'do': 'npm install --legacy-peer-deps && npm
 " Text editing
 Plug 'matze/vim-move'
 
-" Autocomplete
+" Completions
 Plug 'github/copilot.vim'
+Plug 'fannheyward/telescope-coc.nvim'
 
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
+
+" Tree-sitter
+Plug 'p00f/nvim-ts-rainbow'

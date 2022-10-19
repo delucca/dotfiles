@@ -12,4 +12,12 @@ vim.g.coc_global_extensions = {
   'coc-eslint',
   'coc-tslint',
   'coc-highlight',
+  'coc-sumneko-lua',
+  'coc-sh',
+  'coc-json',
+  'coc-yaml',
+  'coc-markdownlint',
+  'coc-html',
+  'coc-css',
+  'coc-python',
 }
