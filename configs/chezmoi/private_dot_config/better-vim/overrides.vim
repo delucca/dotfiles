@@ -1,16 +1,20 @@
 lua << EOF
   local home = os.getenv("HOME")
-  local config_path = home .. '/.config/better-vim/lua/'
+  local configs_path = home .. '/.config/better-vim/configs/'
   local active_configs = {
-    'debugger',
-    'navigation',
-    'package-management',
-    'completions',
-    'syntax-highlighting',
+    'autopairs',
+    'better-escape',
+    'coc',
+    'dap',
+    'gsigns',
+    'vim-plug',
+    'telescope',
+    'tree',
+    'treesitter',
   }
 
   for _, config in ipairs(active_configs) do
-    local config_file = config_path .. config .. '.lua'
+    local config_file = configs_path .. config .. '.lua'
     dofile(config_file)
   end
 EOF

@@ -1,9 +1,11 @@
--- Better escape
-require("better_escape").setup()
+local status_ok_telescope, telescope = pcall(require, 'telescope')
+local status_ok_telescope_actions, telescope_actions = pcall(require, 'telescope.actions')
 
--- Telescope
-local telescope = require("telescope")
-local telescope_actions = require("telescope.actions")
+if
+  not status_ok_telescope or
+  not status_ok_telescope_actions then
+  return
+end
 
 telescope.load_extension('coc')
 telescope.load_extension('media_files')

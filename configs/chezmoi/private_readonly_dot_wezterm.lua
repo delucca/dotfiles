@@ -13,6 +13,7 @@ return {
     'PowerlineExtraSymbols',
   },
   font_size = 11.5,
+  line_height = 1.2,
   color_scheme = 'Catppuccin Mocha',
   window_background_opacity = 0.99,
   hide_tab_bar_if_only_one_tab = true,

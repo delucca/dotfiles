@@ -11,6 +11,7 @@ Plug 'microsoft/vscode-js-debug', { 'do': 'npm install --legacy-peer-deps && npm
 
 " Text editing
 Plug 'matze/vim-move'
+Plug 'p00f/nvim-ts-rainbow'
 
 " Completions
 Plug 'github/copilot.vim'
@@ -19,5 +20,5 @@ Plug 'fannheyward/telescope-coc.nvim'
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
 
-" Tree-sitter
-Plug 'p00f/nvim-ts-rainbow'
+" Git
+Plug 'lewis6991/gitsigns.nvim'
