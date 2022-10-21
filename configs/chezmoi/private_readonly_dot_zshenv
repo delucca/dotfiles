@@ -45,6 +45,18 @@ export FZF_ALT_C_OPTS="
 "
 export FZF_DEFAULT_COMMAND="fd ${FZF_DEFAULT_COMMAND_OPTS}"
 
+export _ZO_FZF_OPTS="\
+  --ansi \
+  --cycle \
+  --layout='reverse' \
+  --height='20' \
+  --preview='tree -L 2 -C {} | head -200' \
+  --preview-window='right:70%:noborder' \
+  --preview-window='right:70%:noborder' \
+  --bind='?:toggle-preview' \
+  --bind='tab:down' \
+"
+
 # Dotenv
 export ZSH_DOTENV_PROMPT=false
 

@@ -8,22 +8,29 @@ return {
 	["<leader>dr"] = { '<cmd>lua require"dap".repl_open()<cr>', "Open debugger REPL" },
 
 	-- resize panels
-	["<c-up>"] = { "<cmd>resize +2<cr>", "Increases the panel size vertically by 2 points" },
-	["<c-down>"] = { "<cmd>resize -2<cr>", "Decreases the panel size vertically by 2 points" },
-	["<c-left>"] = { "<cmd>vertical resize -2<cr>", "Decreases the panel size horizontally by 2 points" },
-	["<c-right>"] = { "<cmd>vertical resize +2<cr>", "Increases the panel size horizontally by 2 points" },
-	["<c-s-up>"] = { "<cmd>resize +7<cr>", "Increases the panel size vertically by 7 points" },
-	["<c-s-down>"] = { "<cmd>resize -7<cr>", "Decreases the panel size vertically by 7 points" },
-	["<c-s-left>"] = { "<cmd>vertical resize -7<cr>", "Decreases the panel size horizontally by 7 points" },
-	["<c-s-right>"] = { "<cmd>vertical resize +7<cr>", "Increases the panel size horizontally by 7 points" },
+	["<c-up>"] = { "<cmd>resize -2<cr>", "Decreases the panel size vertically by 2 points" },
+	["<c-down>"] = { "<cmd>resize +2<cr>", "Increases the panel size vertically by 2 points" },
+	["<c-left>"] = { "<cmd>vertical resize +2<cr>", "Increases the panel size horizontally by 2 points" },
+	["<c-right>"] = { "<cmd>vertical resize -2<cr>", "Decreases the panel size horizontally by 2 points" },
 
 	--  fix identation
 	["<"] = { "<gv", "Avoid removing selection while reducing identation", mode = "v" },
 	[">"] = { ">gv", "Avoid removing selection while adding identation", mode = "v" },
 
 	-- text editing
-	["p"] = { "'_dP", "Avoid copying replaced context after pasting", mode = "v" },
+	["p"] = { "<plug>(YankyPutAfter)", "Paste with Yanky" },
+	["P"] = { "<plug>(YankyPutBefore)", "Paste with Yanky before cursor" },
+	["<m-p>"] = { "<cmd>YankyRingHistory<cr>", "Open yank history" },
+	["<m-o>"] = { "<plug>(YankyCycleForward)", "Cycle yank history forward" },
+	["<m-[>"] = { "<plug>(YankyCycleBackward)", "Cycle yank history backward" },
 	["<leader>/"] = { "<cmd>nohls<cr>", "Removes current highlight" },
+	["go"] = { "<cmd>SymbolsOutline<cr>", "Opens outline" },
+	["gt"] = { "<cmd>TroubleToggle<cr>", "Toggle Trouble window" },
+	["grr"] = { "<cmd>lua require'nvim-treesitter-refactor.smart_rename'.smart_rename(5)<cr>", "Rename in file" },
+	["grR"] = {
+		"<cmd>lua require'spectre'.open_visual({ select_word = true })<cr>",
+		"Rename in project",
+	},
 
 	-- nvim-tree-toggle
 	["<leader>eo"] = { "<cmd>NvimTreeToggle<cr>", "Open file explorer" },
@@ -72,8 +79,15 @@ return {
 	["ts"] = { "<cmd>tabonly<cr>", "Exit all but current tab" },
 	["<s-h>"] = { "<cmd>tabNext<cr>", "Go to next tab" },
 	["<s-l>"] = { "<cmd>tabprevious<cr>", "Go to previous tab" },
-	["<m-l>"] = { "<cmd>BufferLineCycleNext<cr>", "Go to next buffer" },
-	["<m-h>"] = { "<cmd>BufferLineCyclePrev<cr>", "Go to previous buffer" },
+	["<C-L>"] = { "<cmd>BufferLineCycleNext<cr>", "Go to next buffer" },
+	["<C-H>"] = { "<cmd>BufferLineCyclePrev<cr>", "Go to previous buffer" },
+	["<m-H>"] = { "<cmd>BufferLineMovePrev<cr>", "Move buffer to left" },
+	["<m-L>"] = { "<cmd>BufferLineMoveNext<cr>", "Move buffer to right" },
+	["<a-h>"] = { "<cmd>NavigatorLeft<cr>", "Go to window on left" },
+	["<a-j>"] = { "<cmd>NavigatorUp<cr>", "Go to window above" },
+	["<a-k>"] = { "<cmd>NavigatorDown<cr>", "Go to window below" },
+	["<a-l>"] = { "<cmd>NavigatorRight<cr>", "Go to window on right" },
+	["<a-;>"] = { "<cmd>NavigatorPrevious<cr>", "Go to previous window" },
 	["fq"] = { "<cmd>Bwipeout<cr>", "Exit buffer" },
 	["fQ"] = { "<cmd>bufdo :Bdelete<cr>", "Exit all buffers" },
 	["fc"] = { "<cmd>Bwipeout #<cr>", "Exit all but current buffer" },
@@ -85,4 +99,11 @@ return {
 
 	-- projects
 	["gp"] = { "<cmd>Telescope projects<cr>", "Open projects" },
+	["gP"] = { "<cmd>Telescope zoxide list<cr>", "Find directory using Zoxide" },
+
+	-- zen-mode
+	["zz"] = { "<cmd>Twilight<cr>", "Toggle twilight" },
+	["zZ"] = { "<cmd>TZAtaraxis<cr>", "Toggle ataraxis zen-mode" },
+	["zm"] = { "<cmd>TZMinimalist<cr>", "Toggle minimalist zen-mode" },
+	["zn"] = { ":'<,'>TZNarrow<cr>", "Toggle narrow zen-mode", mode = "v" },
 }

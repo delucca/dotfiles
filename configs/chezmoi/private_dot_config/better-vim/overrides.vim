@@ -6,17 +6,32 @@ lua << EOF
     'better-escape',
     'bufferline',
     'coc',
+    'comment',
     'dap',
     'gsigns',
-    'impatient',
+    'hologram',
+    -- 'impatient', - For some reason, it is breaking Github Copilot
     'leap',
+    'navigator',
+    'notify',
     'null-ls',
+    'numb',
     'project',
+    'shade',
+    'spectre',
+    'symbols-outline',
     'vim-plug',
     'telescope',
+    'todo-comments',
     'toggleterm',
     'tree',
     'treesitter',
+    'trouble',
+    'true-zen',
+    'twilight',
+    'vim-illuminate',
+    'wilder',
+    'yanky',
   }
 
   for _, config in ipairs(active_configs) do
@@ -24,4 +39,3 @@ lua << EOF
     dofile(config_file)
   end
 EOF
-

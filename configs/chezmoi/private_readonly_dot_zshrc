@@ -37,7 +37,6 @@ zi light-mode for \
   z-shell/z-a-patch-dl \
   z-shell/z-a-bin-gem-node
 
-
 # Oh-my-zsh configs that I want
 zi snippet "OMZ::lib/completion.zsh"
 zi snippet "OMZ::lib/history.zsh"
@@ -51,14 +50,12 @@ zi snippet "OMZ::plugins/fzf/fzf.plugin.zsh"
 
 # # Improving ZSH usage
 zi light "chrissicool/zsh-256color"
-zi light "rupa/z"
 zi light "djui/alias-tips"
 zi light "supercrabtree/k"
 zi light "zsh-users/zsh-autosuggestions"
 zi light "zsh-users/zsh-syntax-highlighting"
 zi light "zsh-users/zsh-history-substring-search"
 zi light "Tarrasch/zsh-bd"
-zi light "changyuheng/zsh-interactive-cd"
 zi light "shannonmoeller/up"
 zi light "Aloxaf/fzf-tab"
 zi light "changyuheng/fz"
@@ -80,6 +77,10 @@ zstyle ':fzf-tab:complete:cat:argument-rest' fzf-preview '[[ $(file --mime-type 
 
 # Load Starship
 eval "$(starship init zsh)"
+
+# zoxide
+eval "$(zoxide init --cmd cd zsh)"
+(( ${+_comps} )) && _comps[cd]=__zoxide_z_complete
 
 # Start Zellij
 if [[ -z "$ZELLIJ" && -z "$TERMINAL_EMULATOR" ]]; then
