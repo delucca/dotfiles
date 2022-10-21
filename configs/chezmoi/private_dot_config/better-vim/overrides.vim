@@ -4,9 +4,11 @@ lua << EOF
   local active_configs = {
     'autopairs',
     'better-escape',
+    'bufferline',
     'coc',
     'dap',
     'gsigns',
+    'null-ls',
     'vim-plug',
     'telescope',
     'tree',

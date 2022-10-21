@@ -22,3 +22,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 " Git
 Plug 'lewis6991/gitsigns.nvim'
+
+" Buffer, windows, and tabs
+Plug 'moll/vim-bbye'
+
+" Formatting
+Plug 'jose-elias-alvarez/null-ls.nvim'
