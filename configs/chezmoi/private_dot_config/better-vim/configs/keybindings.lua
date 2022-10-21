@@ -90,6 +90,7 @@ return {
 	["<a-;>"] = { "<cmd>NavigatorPrevious<cr>", "Go to previous window" },
 	["fq"] = { "<cmd>Bwipeout<cr>", "Exit buffer" },
 	["fQ"] = { "<cmd>bufdo :Bdelete<cr>", "Exit all buffers" },
+	["fs"] = { "<cmd>w<cr>", "Save file" },
 	["fc"] = { "<cmd>Bwipeout #<cr>", "Exit all but current buffer" },
 	["fp"] = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
 	["fP"] = { "<cmd>BufferLinePickClose<cr>", "Pick buffer to close" },
