@@ -1,6 +1,8 @@
 " Navigation
 Plug 'max397574/better-escape.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
+Plug 'ggandor/leap.nvim'
+Plug 'tpope/vim-repeat'
 
 " Debugging
 Plug 'mfussenegger/nvim-dap'
@@ -28,3 +30,12 @@ Plug 'moll/vim-bbye'
 
 " Formatting
 Plug 'jose-elias-alvarez/null-ls.nvim'
+
+" Terminal
+Plug 'akinsho/toggleterm.nvim'
+
+" Project
+Plug 'ahmedkhalf/project.nvim'
+
+" Startup
+Plug 'lewis6991/impatient.nvim'

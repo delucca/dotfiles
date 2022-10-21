@@ -59,27 +59,30 @@ return {
 	["<leader>tS"] = { "<cmd>Telescope coc document_symbols<cr>", "Find symbols in document" },
 
 	-- gitsigns
-	["gp"] = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Git changes" },
+	["gh"] = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Git changes" },
 	["gb"] = { "<cmd>Gitsigns blame_line<cr>", "Git blame" },
 
 	-- buffer, windows, and tabs
 	["|"] = { "<cmd>vsplit<cr>", "Create a new vertical window" },
 	["-"] = { "<cmd>split<cr>", "Create a new horizontal window" },
+	[",q"] = { "<cmd>close<cr>", "Close current window" },
 	["tn"] = { "<cmd>tabnew %<cr>", "Create a new tab" },
 	["tq"] = { "<cmd>tabclose<cr>", "Exit current tab" },
 	["tQ"] = { "<cmd>tabclose!<cr>", "Exit all tabs" },
 	["ts"] = { "<cmd>tabonly<cr>", "Exit all but current tab" },
 	["<s-h>"] = { "<cmd>tabNext<cr>", "Go to next tab" },
 	["<s-l>"] = { "<cmd>tabprevious<cr>", "Go to previous tab" },
-	["<c-l>"] = { "<cmd>BufferLineCycleNext<cr>", "Go to next buffer" },
-	["<c-h>"] = { "<cmd>BufferLineCyclePrev<cr>", "Go to previous buffer" },
-	["<m-h>"] = { "<cmd>wincmd h<cr>", "Go to window on the left" },
-	["<m-j>"] = { "<cmd>wincmd j<cr>", "Go to window below" },
-	["<m-k>"] = { "<cmd>wincmd k<cr>", "Go to window above" },
-	["<m-l>"] = { "<cmd>wincmd l<cr>", "Go to window on the right" },
+	["<m-l>"] = { "<cmd>BufferLineCycleNext<cr>", "Go to next buffer" },
+	["<m-h>"] = { "<cmd>BufferLineCyclePrev<cr>", "Go to previous buffer" },
 	["fq"] = { "<cmd>Bwipeout<cr>", "Exit buffer" },
 	["fQ"] = { "<cmd>bufdo :Bdelete<cr>", "Exit all buffers" },
 	["fc"] = { "<cmd>Bwipeout #<cr>", "Exit all but current buffer" },
 	["fp"] = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
 	["fP"] = { "<cmd>BufferLinePickClose<cr>", "Pick buffer to close" },
+
+	-- git
+	["<m-g>"] = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Toggle Lazygit window" },
+
+	-- projects
+	["gp"] = { "<cmd>Telescope projects<cr>", "Open projects" },
 }

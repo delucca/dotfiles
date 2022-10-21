@@ -8,9 +8,13 @@ lua << EOF
     'coc',
     'dap',
     'gsigns',
+    'impatient',
+    'leap',
     'null-ls',
+    'project',
     'vim-plug',
     'telescope',
+    'toggleterm',
     'tree',
     'treesitter',
   }
