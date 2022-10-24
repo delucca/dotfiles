@@ -6,12 +6,13 @@ return {
 	["<f8>"] = { '<cmd>lua require"dap".step_out()<cr>', "Step out on debugger" },
 	["<leader>db"] = { '<cmd>lua require"dap".toggle_breakpoint()<cr>', "Toggle breakpoint" },
 	["<leader>dr"] = { '<cmd>lua require"dap".repl_open()<cr>', "Open debugger REPL" },
+	["<leader>er"] = { "<plug>RestNvim", "Execute request under cursor" },
 
 	-- resize panels
-	["<c-up>"] = { "<cmd>resize -2<cr>", "Decreases the panel size vertically by 2 points" },
-	["<c-down>"] = { "<cmd>resize +2<cr>", "Increases the panel size vertically by 2 points" },
-	["<c-left>"] = { "<cmd>vertical resize +2<cr>", "Increases the panel size horizontally by 2 points" },
-	["<c-right>"] = { "<cmd>vertical resize -2<cr>", "Decreases the panel size horizontally by 2 points" },
+	["<a-up>"] = { "<cmd>resize -2<cr>", "Decreases the panel size vertically by 2 points" },
+	["<a-down>"] = { "<cmd>resize +2<cr>", "Increases the panel size vertically by 2 points" },
+	["<a-left>"] = { "<cmd>vertical resize -2<cr>", "Decreases the panel size horizontally by 2 points" },
+	["<a-right>"] = { "<cmd>vertical resize +2<cr>", "Increases the panel size horizontally by 2 points" },
 
 	--  fix identation
 	["<"] = { "<gv", "Avoid removing selection while reducing identation", mode = "v" },
@@ -20,7 +21,7 @@ return {
 	-- text editing
 	["p"] = { "<plug>(YankyPutAfter)", "Paste with Yanky" },
 	["P"] = { "<plug>(YankyPutBefore)", "Paste with Yanky before cursor" },
-	["<m-p>"] = { "<cmd>YankyRingHistory<cr>", "Open yank history" },
+	["<m-y>"] = { "<cmd>YankyRingHistory<cr>", "Open yank history" },
 	["<m-o>"] = { "<plug>(YankyCycleForward)", "Cycle yank history forward" },
 	["<m-[>"] = { "<plug>(YankyCycleBackward)", "Cycle yank history backward" },
 	["<leader>/"] = { "<cmd>nohls<cr>", "Removes current highlight" },
@@ -31,9 +32,13 @@ return {
 		"<cmd>lua require'spectre'.open_visual({ select_word = true })<cr>",
 		"Rename in project",
 	},
+	["<a-J>"] = { "<plug>(VM-Add-Cursor-Down)", "Add a new cursor down" },
+	["<a-K>"] = { "<plug>(VM-Add-Cursor-Up)", "Add a new cursor down" },
+	["<a-.>"] = { "<cmd>CodeActionMenu<cr>", "Open code actions" },
 
 	-- nvim-tree-toggle
 	["<leader>eo"] = { "<cmd>NvimTreeToggle<cr>", "Open file explorer" },
+	["<a-e>"] = { "<cmd>NvimTreeToggle<cr>", "Open file explorer" },
 
 	-- file control
 	["qw"] = { "<cmd>w<cr>", "Save file" },
@@ -64,6 +69,10 @@ return {
 	},
 	["<leader>ts"] = { "<cmd>Telescope coc workspace_symbols<cr>", "Find symbols in workspace" },
 	["<leader>tS"] = { "<cmd>Telescope coc document_symbols<cr>", "Find symbols in document" },
+	["<leader>tk"] = { "<cmd>Legendary<cr>", "Find keymap" },
+	["<m-p>"] = { "<cmd>Telescope find_files<cr>", "Find files" },
+	["<m-f>"] = { "<cmd>Telescope live_grep<cr>", "Search" },
+	["<m-P>"] = { "<cmd>Telescope projects<cr>", "Find files" },
 
 	-- gitsigns
 	["gh"] = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Git changes" },
@@ -84,8 +93,8 @@ return {
 	["<m-H>"] = { "<cmd>BufferLineMovePrev<cr>", "Move buffer to left" },
 	["<m-L>"] = { "<cmd>BufferLineMoveNext<cr>", "Move buffer to right" },
 	["<a-h>"] = { "<cmd>NavigatorLeft<cr>", "Go to window on left" },
-	["<a-j>"] = { "<cmd>NavigatorUp<cr>", "Go to window above" },
-	["<a-k>"] = { "<cmd>NavigatorDown<cr>", "Go to window below" },
+	["<a-j>"] = { "<cmd>NavigatorDown<cr>", "Go to window below" },
+	["<a-k>"] = { "<cmd>NavigatorUp<cr>", "Go to window above" },
 	["<a-l>"] = { "<cmd>NavigatorRight<cr>", "Go to window on right" },
 	["<a-;>"] = { "<cmd>NavigatorPrevious<cr>", "Go to previous window" },
 	["fq"] = { "<cmd>Bwipeout<cr>", "Exit buffer" },
@@ -94,6 +103,8 @@ return {
 	["fc"] = { "<cmd>Bwipeout #<cr>", "Exit all but current buffer" },
 	["fp"] = { "<cmd>BufferLinePick<cr>", "Pick buffer" },
 	["fP"] = { "<cmd>BufferLinePickClose<cr>", "Pick buffer to close" },
+	["<a-w>"] = { "<cmd>WinShift<cr>", "Move current window elsewhere" },
+	["<leader>w"] = { "<cmd>lua require('nvim-window').pick()<cr>", "Switch to a specific window" },
 
 	-- git
 	["<m-g>"] = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Toggle Lazygit window" },
@@ -107,4 +118,9 @@ return {
 	["zZ"] = { "<cmd>TZAtaraxis<cr>", "Toggle ataraxis zen-mode" },
 	["zm"] = { "<cmd>TZMinimalist<cr>", "Toggle minimalist zen-mode" },
 	["zn"] = { ":'<,'>TZNarrow<cr>", "Toggle narrow zen-mode", mode = "v" },
+
+	-- javascript
+	["<leader>ete"] = { "<cmd>lua require'jester'.run()", "Run test under cursor" },
+	["<leader>etE"] = { "<cmd>lua require'jester'.run_file()", "Run all tests from this file" },
+	["<leader>etd"] = { "<cmd>lua require'jester'.debug()", "Debug test under cursor" },
 }

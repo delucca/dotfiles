@@ -1,0 +1,7 @@
+{
+  "Lua.telemetry.enable": true,
+  "sumneko-lua.enableNvimLuaDev": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.enableMessage": "jump",
+  "eslint.autoFixOnSave": true
+}
