@@ -3,5 +3,6 @@
   "sumneko-lua.enableNvimLuaDev": true,
   "diagnostic.checkCurrentLine": true,
   "diagnostic.enableMessage": "jump",
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "pnpm"
 }

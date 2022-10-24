@@ -8,9 +8,9 @@ lua << EOF
     'coc',
     'code-action-menu',
     'comment',
+    'copilot',
     'dap',
     'dashboard',
-    'focus',
     'gsigns',
     'hologram',
     -- 'impatient', - For some reason, it is breaking Github Copilot

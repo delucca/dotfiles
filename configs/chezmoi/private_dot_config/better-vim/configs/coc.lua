@@ -15,4 +15,5 @@ vim.g.coc_global_extensions = {
 	"coc-html",
 	"coc-css",
 	"coc-python",
+	"coc-tsdetect",
 }

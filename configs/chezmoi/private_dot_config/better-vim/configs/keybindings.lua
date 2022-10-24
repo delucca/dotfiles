@@ -4,8 +4,10 @@ return {
 	["<f6>"] = { '<cmd>lua require"dap".step_over()<cr>', "Step over on debugger" },
 	["<f7>"] = { '<cmd>lua require"dap".step_into()<cr>', "Step into on debugger" },
 	["<f8>"] = { '<cmd>lua require"dap".step_out()<cr>', "Step out on debugger" },
+	["<leader>do"] = { '<cmd>lua require"dapui".toggle()<cr>', "Open debugger UI" },
 	["<leader>db"] = { '<cmd>lua require"dap".toggle_breakpoint()<cr>', "Toggle breakpoint" },
-	["<leader>dr"] = { '<cmd>lua require"dap".repl_open()<cr>', "Open debugger REPL" },
+	["<leader>dr"] = { '<cmd>lua require"dap".repl.open()<cr>', "Open debugger REPL" },
+	["<leader>ds"] = { '<cmd>lua require"dap".terminate()<cr>', "Stop running debugger" },
 	["<leader>er"] = { "<plug>RestNvim", "Execute request under cursor" },
 
 	-- resize panels
@@ -60,7 +62,8 @@ return {
 		expr = true,
 	},
 	["gd"] = { '<cmd>call CocAction("jumpDefinition")<cr>', "Go to definition" },
-	["gD"] = { '<cmd>call CocAction("diagnosticInfo")<cr>', "Show diagnostic" },
+	["td"] = { '<cmd>call CocAction("diagnosticInfo")<cr>', "Show diagnostic" },
+	["tt"] = { "<cmd>TroubleToggle<cr>", "Show all diagnostics for file" },
 
 	-- telescope
 	["<leader>f"] = {

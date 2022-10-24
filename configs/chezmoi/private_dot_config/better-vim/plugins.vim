@@ -57,7 +57,6 @@ Plug 'moll/vim-bbye'
 Plug 'numToStr/Navigator.nvim'
 Plug 'sindrets/winshift.nvim'
 Plug 'https://gitlab.com/yorickpeterse/nvim-window.git'
-Plug 'beauwilliams/focus.nvim'
 Plug 'mg979/vim-visual-multi'
 
 " Formatting
