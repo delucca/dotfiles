@@ -11,8 +11,8 @@ return {
 	["<leader>er"] = { "<plug>RestNvim", "Execute request under cursor" },
 
 	-- resize panels
-	["<a-up>"] = { "<cmd>resize -2<cr>", "Decreases the panel size vertically by 2 points" },
-	["<a-down>"] = { "<cmd>resize +2<cr>", "Increases the panel size vertically by 2 points" },
+	["<a-up>"] = { "<cmd>resize +2<cr>", "Increases the panel size vertically by 2 points" },
+	["<a-down>"] = { "<cmd>resize -2<cr>", "Decreases the panel size vertically by 2 points" },
 	["<a-left>"] = { "<cmd>vertical resize -2<cr>", "Decreases the panel size horizontally by 2 points" },
 	["<a-right>"] = { "<cmd>vertical resize +2<cr>", "Increases the panel size horizontally by 2 points" },
 
@@ -64,6 +64,7 @@ return {
 	["gd"] = { '<cmd>call CocAction("jumpDefinition")<cr>', "Go to definition" },
 	["td"] = { '<cmd>call CocAction("diagnosticInfo")<cr>', "Show diagnostic" },
 	["tt"] = { "<cmd>TroubleToggle<cr>", "Show all diagnostics for file" },
+	["<c-s>"] = { "<cmd>call CocActionAsync('showSignatureHelp')<cr>", "Show signature of selected method", mode = "i" },
 
 	-- telescope
 	["<leader>f"] = {

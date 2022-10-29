@@ -23,8 +23,8 @@ dashboard.custom_center = {
 		shortcut = "alt+f",
 	},
 	{
-		icon = "☰ ",
-		desc = "Change project               ",
+		icon = "  ",
+		desc = "Change project              ",
 		action = "Telescope projects",
 		shortcut = "alt+shift+p",
 	},

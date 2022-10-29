@@ -12,7 +12,7 @@ lua << EOF
     'dap',
     'dashboard',
     'gsigns',
-    'hologram',
+    --'hologram',
     -- 'impatient', - For some reason, it is breaking Github Copilot
     'leap',
     'legendary',

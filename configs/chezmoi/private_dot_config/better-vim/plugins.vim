@@ -23,7 +23,8 @@ Plug 'RRethy/vim-illuminate'
 Plug 'geekifan/symbols-outline.nvim'
 Plug 'gbprod/yanky.nvim'
 Plug 'stevearc/dressing.nvim'
-Plug 'edluffy/hologram.nvim'
+
+" Plug 'edluffy/hologram.nvim'
 Plug 'folke/todo-comments.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
@@ -33,6 +34,7 @@ Plug 'kevinhwang91/promise-async'
 Plug 'kevinhwang91/nvim-ufo'
 
 " Completions
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'github/copilot.vim'
 Plug 'fannheyward/telescope-coc.nvim'
 Plug 'folke/trouble.nvim'
