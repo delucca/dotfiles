@@ -89,3 +89,16 @@ function yubikey_release {
   killall -HUP yubikey-agent
   gpgconf --kill gpg-agent
 }
+
+# PNPM
+# -------------------------------------------------------------------------------------------------
+
+function use_pnpm6 {
+  rm $HOME/.local/share/pnpm
+  ln -s $HOME/.local/share/pnpm6 $HOME/.local/share/pnpm
+}
+
+function use_pnpm7 {
+  rm $HOME/.local/share/pnpm
+  ln -s $HOME/.local/share/pnpm7 $HOME/.local/share/pnpm
+}
