@@ -4,7 +4,7 @@
   <br>
 </p>
 <p align="center">
-All my relevant configuration files in a single place.
+All my relevant configuration files in a single place
 </p>
 
 ## 📖 About this Project
