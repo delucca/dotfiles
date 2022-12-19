@@ -13,7 +13,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'mxsdev/nvim-dap-vscode-js'
-Plug 'microsoft/vscode-js-debug', { 'do': 'npm install --legacy-peer-deps && npm run compile' }
+Plug 'microsoft/vscode-js-debug', { 'do': 'npm ci --legacy-peer-deps && npm run compile' }
 Plug 'NTBBloodbath/rest.nvim'
 
 " Text editing
