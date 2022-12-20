@@ -92,7 +92,7 @@
 [includeIf "gitdir:~/src/trilonio/"]
   path = ~/.gitconfig.trilon
 
-[includeIf "gitdir:~/src/motion"]
+[includeIf "gitdir:~/src/motion/"]
   path = ~/.gitconfig.motion
 
 [filter "lfs"]
