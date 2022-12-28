@@ -102,3 +102,11 @@ function use_pnpm7 {
   rm $HOME/.local/share/pnpm
   ln -s $HOME/.local/share/pnpm7 $HOME/.local/share/pnpm
 }
+
+function sync_pnpm_with_npm {
+  rm -rf node_modules package-lock.json pnpm-lock.yaml
+  npm install
+  rm -rf node_modules
+  pnpm import
+  pnpm install
+}
