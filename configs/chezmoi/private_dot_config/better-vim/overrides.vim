@@ -13,7 +13,7 @@ lua << EOF
     'dashboard',
     'gsigns',
     --'hologram',
-    -- 'impatient', - For some reason, it is breaking Github Copilot
+    --'impatient', - For some reason, it is breaking Github Copilot
     'leap',
     'legendary',
     'lualine',
@@ -21,6 +21,7 @@ lua << EOF
     'notify',
     'null-ls',
     'numb',
+    --'nx',
     'octo',
     'project',
     'rest',

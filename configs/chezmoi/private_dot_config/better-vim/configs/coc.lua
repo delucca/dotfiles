@@ -17,3 +17,8 @@ vim.g.coc_global_extensions = {
 	"coc-python",
 	"coc-tsdetect",
 }
+
+vim.g.coc_root_patterns = {
+  ".git",
+  "src",
+}

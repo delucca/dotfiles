@@ -83,3 +83,4 @@ Plug 'rcarriga/nvim-notify'
 
 " Javascript
 Plug 'David-Kunz/jester'
+Plug 'Equilibris/nx.nvim'
