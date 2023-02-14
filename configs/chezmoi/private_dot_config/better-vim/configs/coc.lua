@@ -16,9 +16,10 @@ vim.g.coc_global_extensions = {
 	"coc-css",
 	"coc-python",
 	"coc-tsdetect",
+	"coc-vimtex",
 }
 
 vim.g.coc_root_patterns = {
-  ".git",
-  "src",
+	".git",
+	"src",
 }

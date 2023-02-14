@@ -1,4 +1,5 @@
 local status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
+
 if not status_ok then
 	return
 end
@@ -8,7 +9,7 @@ treesitter.setup({
 	sync_install = false,
 	highlight = {
 		enable = true,
-		disable = {},
+		disable = { "latex" },
 		additional_vim_regex_highlighting = true,
 	},
 	rainbow = {

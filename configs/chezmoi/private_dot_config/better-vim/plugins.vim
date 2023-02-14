@@ -15,6 +15,7 @@ Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'mxsdev/nvim-dap-vscode-js'
 Plug 'microsoft/vscode-js-debug', { 'do': 'npm ci --legacy-peer-deps && npm run compile' }
 Plug 'NTBBloodbath/rest.nvim'
+Plug 'mfussenegger/nvim-dap-python'
 
 " Text editing
 Plug 'matze/vim-move'
@@ -38,6 +39,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 Plug 'github/copilot.vim'
 Plug 'fannheyward/telescope-coc.nvim'
 Plug 'folke/trouble.nvim'
+Plug 'terror/chatgpt.nvim', { 'do': 'pip3 install -r requirements.txt' }
 
 function! UpdateRemotePlugins(...)
     let &rtp=&rtp
@@ -84,3 +86,6 @@ Plug 'rcarriga/nvim-notify'
 " Javascript
 Plug 'David-Kunz/jester'
 Plug 'Equilibris/nx.nvim'
+
+" TeX
+Plug 'lervag/vimtex'

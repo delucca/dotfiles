@@ -127,4 +127,8 @@ return {
 	["<leader>ete"] = { "<cmd>lua require'jester'.run()", "Run test under cursor" },
 	["<leader>etE"] = { "<cmd>lua require'jester'.run_file()", "Run all tests from this file" },
 	["<leader>etd"] = { "<cmd>lua require'jester'.debug()", "Debug test under cursor" },
+
+	-- vimtex
+	["<leader>vl"] = { "<cmd>VimtexCompile<cr>", "Compile current TeX file" },
+	["<leader>vv"] = { "<cmd>VimtexView<cr>", "View current TeX file" },
 }

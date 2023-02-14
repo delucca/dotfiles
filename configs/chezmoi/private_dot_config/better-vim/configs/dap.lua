@@ -1,9 +1,25 @@
 local setup_ok_dap, dap = pcall(require, "dap")
 local setup_ok_dap_virtual_text, dap_virtual_text = pcall(require, "nvim-dap-virtual-text")
 local setup_ok_dap_ui, dap_ui = pcall(require, "dapui")
+
+-- dap.listeners.after.event_initialized["dapui_config"] = function()
+-- 	dap_ui.open()
+-- end
+-- dap.listeners.before.event_terminated["dapui_config"] = function()
+-- 	dap_ui.close()
+-- end
+-- dap.listeners.before.event_exited["dapui_config"] = function()
+-- 	dap_ui.close()
+-- end
+
+if not setup_ok_dap_virtual_text or not setup_ok_dap_ui or not setup_ok_dap then
+	return
+end
+
+-- Javascript/Typescript/NodeJS
 local setup_ok_dap_vscode_js, dap_vscode_js = pcall(require, "dap-vscode-js")
 
-if not setup_ok_dap_virtual_text or not setup_ok_dap_ui or not setup_ok_dap_vscode_js or not setup_ok_dap then
+if not setup_ok_dap_vscode_js then
 	return
 end
 
@@ -54,12 +70,23 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 	}
 end
 
--- dap.listeners.after.event_initialized["dapui_config"] = function()
--- 	dap_ui.open()
--- end
--- dap.listeners.before.event_terminated["dapui_config"] = function()
--- 	dap_ui.close()
--- end
--- dap.listeners.before.event_exited["dapui_config"] = function()
--- 	dap_ui.close()
--- end
+-- Python
+local setup_ok_dap_python, dap_python = pcall(require, "dap-python")
+
+if not setup_ok_dap_python then
+	return
+end
+
+dap_python.setup("/usr/bin/python")
+
+table.insert(dap.configurations.python, {
+	name = "Launch Flask server",
+	type = "python",
+	request = "launch",
+	console = "integratedTerminal",
+	program = "${env:HOME}/.local/bin/poetry",
+	args = {
+		"run",
+		"flask",
+	},
+})

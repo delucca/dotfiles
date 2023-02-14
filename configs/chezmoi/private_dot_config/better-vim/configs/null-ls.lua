@@ -12,6 +12,7 @@ null_ls.setup({
 	sources = {
 		formatting.stylua,
 		diagnostics.eslint,
+		formatting.black,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

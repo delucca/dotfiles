@@ -82,6 +82,9 @@ export VOLTA_HOME="/home/delucca/.volta"
 # ZELLIJ
 export ZELLIJ_CONFIG_DIR="/home/delucca/.zellij"
 
+# Python
+export PYTHON_VENV_PATH="/home/delucca/python-venvs"
+
 # PATH
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/local/bin"
