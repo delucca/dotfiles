@@ -110,3 +110,9 @@ function sync_pnpm_with_npm {
   pnpm import
   pnpm install
 }
+
+# Python
+# -------------------------------------------------------------------------------------------------
+function poetry {
+  $PYTHON_VENV_PATH/bin/poetry $@
+}

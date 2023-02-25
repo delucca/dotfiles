@@ -87,7 +87,7 @@ if [[ -z "$ZELLIJ" && -z "$TERMINAL_EMULATOR" ]]; then
   if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
     zellij attach -c
   else
-    zellij --layout compact
+    zellij
   fi
 
   if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then

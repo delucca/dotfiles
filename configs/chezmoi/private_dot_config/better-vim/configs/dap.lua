@@ -77,16 +77,19 @@ if not setup_ok_dap_python then
 	return
 end
 
-dap_python.setup("~/.python-venvs/debugpy/bin/python")
+dap_python.setup("~/.python-venvs/bin/python")
 
 table.insert(dap.configurations.python, {
 	name = "Launch Flask server",
 	type = "python",
 	request = "launch",
 	console = "integratedTerminal",
+	cwd = "${workspaceFolder}",
 	program = "${env:PYTHON_VENV_PATH}/bin/poetry",
 	args = {
 		"run",
 		"flask",
+		"--no-debug",
+		"run",
 	},
 })
