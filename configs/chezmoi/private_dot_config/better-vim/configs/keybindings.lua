@@ -28,7 +28,10 @@ return {
 	["<m-[>"] = { "<plug>(YankyCycleBackward)", "Cycle yank history backward" },
 	["<leader>/"] = { "<cmd>nohls<cr>", "Removes current highlight" },
 	["go"] = { "<cmd>SymbolsOutline<cr>", "Opens outline" },
-	["gt"] = { "<cmd>TroubleToggle<cr>", "Toggle Trouble window" },
+	["gt"] = {
+		"<cmd>call coc#rpc#request('fillDiagnostics', [bufnr('%')])<cr><cmd>Trouble loclist<cr>",
+		"Toggle Trouble window with coc support",
+	},
 	["grr"] = { "<cmd>lua require'nvim-treesitter-refactor.smart_rename'.smart_rename(5)<cr>", "Rename in file" },
 	["grR"] = {
 		"<cmd>lua require'spectre'.open_visual({ select_word = true })<cr>",
