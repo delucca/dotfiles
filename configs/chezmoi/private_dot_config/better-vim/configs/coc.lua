@@ -23,3 +23,5 @@ vim.g.coc_root_patterns = {
 	".git",
 	"src",
 }
+
+vim.g.coc_config_home = "~/.config/better-vim/configs"
