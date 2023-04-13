@@ -19,9 +19,6 @@ vim.g.coc_global_extensions = {
 	"coc-vimtex",
 }
 
-vim.g.coc_root_patterns = {
-	".git",
-	"src",
-}
+vim.g.coc_root_patterns = { ".git", "src", ".env", "venv", ".venv", "setup.cfg", "setup.py", "pyrightconfig.json" }
 
 vim.g.coc_config_home = "~/.config/better-vim/configs"

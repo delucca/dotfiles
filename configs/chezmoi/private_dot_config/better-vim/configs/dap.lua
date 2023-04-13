@@ -89,7 +89,6 @@ table.insert(dap.configurations.python, {
 	args = {
 		"run",
 		"flask",
-		"--no-debug",
 		"run",
 	},
 })
