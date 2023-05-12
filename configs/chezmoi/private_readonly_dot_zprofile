@@ -1,6 +1,7 @@
 # Pyenv
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Fcitx
 export GTK_IM_MODULE="fcitx"
