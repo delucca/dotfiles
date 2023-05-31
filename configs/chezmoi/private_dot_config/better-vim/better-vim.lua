@@ -24,6 +24,8 @@ return {
 			["-"] = { "<cmd>split<cr>", "Create a new horizontal window" },
 			["<leader>vl"] = { "<cmd>VimtexCompile<cr>", "Compile current TeX file" },
 			["<leader>vv"] = { "<cmd>VimtexView<cr>", "View current TeX file" },
+			["<c-j>"] = { "<c-n>", "Navigate to next on autocomplete", mode = { "i" }, remap = true },
+			["<c-k>"] = { "<c-p>", "Navigate to previous on autocomplete", mode = { "i" }, remap = true },
 		},
 	},
 	plugins = {
@@ -39,15 +41,15 @@ return {
 		"pwntester/octo.nvim",
 		"akinsho/toggleterm.nvim",
 		"lervag/vimtex",
-		--    'mg979/vim-visual-multi',
-		--    'gelguy/wilder.nvim',
+		-- "mg979/vim-visual-multi",
+		-- "gelguy/wilder.nvim",
 	},
 	hooks = {
 		after_setup = function()
 			require("better-vim.configs.treesitter")
 			require("better-vim.configs.toggleterm")
-			--     require 'better-vim.configs.vim-visual-multi'
-			--     require 'better-vim.configs.wilder'
+			-- require("better-vim.configs.vim-visual-multi")
+			-- require("better-vim.configs.wilder")
 		end,
 	},
 }
