@@ -5,8 +5,6 @@ if not status_ok then
 end
 
 treesitter.setup({
-	ensure_installed = "all",
-	sync_install = false,
 	highlight = {
 		enable = true,
 		disable = { "latex" },
