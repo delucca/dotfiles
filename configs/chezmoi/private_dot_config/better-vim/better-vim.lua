@@ -28,6 +28,7 @@ return {
 			["<c-k>"] = { "<c-p>", "Navigate to previous on autocomplete", mode = { "i" }, remap = true },
 			["<m-p>"] = { "<plug>(VM-Add-Cursor-Up)", "Add a new cursor up" },
 			["<m-n>"] = { "<plug>(VM-Add-Cursor-Down)", "Add a new cursor down" },
+			["<leader>?"] = { "<cmd>nohls<cr>", "Remove selection" },
 		},
 	},
 	plugins = {
