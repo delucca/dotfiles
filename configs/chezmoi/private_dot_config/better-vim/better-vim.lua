@@ -29,6 +29,7 @@ return {
 			["<m-p>"] = { "<plug>(VM-Add-Cursor-Up)", "Add a new cursor up" },
 			["<m-n>"] = { "<plug>(VM-Add-Cursor-Down)", "Add a new cursor down" },
 			["<leader>?"] = { "<cmd>nohls<cr>", "Remove selection" },
+			["<c-n>"] = { "<Nop>", "Removes open NvimTree default shortcut" },
 		},
 	},
 	plugins = {
