@@ -1,13 +1,13 @@
 Host *
   IdentityAgent ~/.1password/agent.sock
 
-Host github-personal
+Host githubpersonal
   HostName github.com
   User git
   IdentityFile ~/.ssh/id_ed25519_personal.pub
   IdentitiesOnly yes
 
-Host github-motion
+Host githubmotion
   HostName github.com
   User git
   IdentityFile ~/.ssh/id_ed25519_motion.pub
