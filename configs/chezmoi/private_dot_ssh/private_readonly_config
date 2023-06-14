@@ -7,7 +7,7 @@ Host github.com
   IdentityFile ~/.ssh/id_ed25519_personal.pub
   IdentitiesOnly yes
 
-Host motion.github
+Host github-motion
   HostName github.com
   User git
   IdentityFile ~/.ssh/id_ed25519_motion.pub
