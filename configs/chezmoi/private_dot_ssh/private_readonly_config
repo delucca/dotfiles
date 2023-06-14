@@ -1,7 +1,7 @@
 Host *
   IdentityAgent ~/.1password/agent.sock
 
-Host github.com
+Host github-personal
   HostName github.com
   User git
   IdentityFile ~/.ssh/id_ed25519_personal.pub
