@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Networking
+export SERVER_MAC_ADDR="1c:1b:0d:ed:3c:ae"
+
 # Zinit
 export PLUGINS="$HOME/.zi/plugins"
 

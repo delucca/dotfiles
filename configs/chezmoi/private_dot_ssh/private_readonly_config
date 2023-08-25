@@ -12,3 +12,10 @@ Host github-motion
   User git
   IdentityFile ~/.ssh/id_ed25519_motion.pub
   IdentitiesOnly yes
+
+Host ogbon-login3.fieb.org.br
+  HostName ogbon-login3.fieb.org.br
+  User daniel.fonseca
+  IdentityFile ~/.ssh/id_ed25519_personal.pub
+  IdentitiesOnly yes
+

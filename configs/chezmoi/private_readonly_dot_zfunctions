@@ -110,3 +110,11 @@ function sync_pnpm_with_npm {
   pnpm import
   pnpm install
 }
+
+# Networking
+# -------------------------------------------------------------------------------------------------
+
+function get_server_addr {
+  export SERVER_ADDR=$(nmap -sP 172.16.0.0/24 >/dev/null && arp -an | grep ${SERVER_MAC_ADDR} | awk '{print $2}' | sed 's/[()]//g')
+  echo ${SERVER_ADDR}
+}
