@@ -83,7 +83,7 @@ eval "$(zoxide init --cmd cd zsh)"
 (( ${+_comps} )) && _comps[cd]=__zoxide_z_complete
 
 # Start Zellij
-if [[ -z "$ZELLIJ" && -z "$TERMINAL_EMULATOR" ]]; then
+if [[ -z "$ZELLIJ" && -z "$TERMINAL_EMULATOR" && "$TERM_PROGRAM" != "vscode" ]]; then
   if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
     zellij attach -c
   else
