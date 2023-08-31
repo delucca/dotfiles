@@ -1,0 +1,18 @@
+{
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "MonoLisa, 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim-vscode/init.lua",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false
+    },
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 1,
+    "workbench.activityBar.visible": false
+}
