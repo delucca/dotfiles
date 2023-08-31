@@ -1,8 +1,14 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "alt+-",
-        "command": "workbench.action.focusSideBar"
+        "key": "alt+h",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "!editorFocus"
     },
     {
         "key": "ctrl+0",
@@ -19,11 +25,6 @@
         "when": "terminal.active"
     },
     {
-        "key": "alt+-",
-        "command": "workbench.action.focusFirstEditorGroup",
-        "when": "sideBarFocus"
-    },
-    {
         "key": "ctrl+1",
         "command": "-workbench.action.focusFirstEditorGroup"
     },
@@ -36,11 +37,12 @@
         "command": "-workbench.action.lastEditorInGroup"
     },
     {
-        "key": "alt+=",
-        "command": "workbench.action.focusAuxiliaryBar"
+        "key": "alt+l",
+        "command": "workbench.action.focusAuxiliaryBar",
+        "when": "!sideBarFocus"
     },
     {
-        "key": "shift+alt+=",
+        "key": "shift+alt+l",
         "command": "workbench.action.toggleAuxiliaryBar"
     },
     {
@@ -62,11 +64,20 @@
         "command": "workbench.action.toggleActivityBarVisibility"
     },
     {
-        "key": "shift+alt+-",
+        "key": "shift+alt+h",
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "alt+h",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "workbench.files.action.focusFilesExplorer"
     }
 ]
