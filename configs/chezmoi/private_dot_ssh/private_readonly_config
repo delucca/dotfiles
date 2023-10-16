@@ -1,3 +1,7 @@
+Host 13.58.224.224
+  HostName 13.58.224.224
+  User ubuntu
+
 Host *
   IdentityAgent ~/.1password/agent.sock
 
@@ -19,3 +23,16 @@ Host ogbon-login3.fieb.org.br
   IdentityFile ~/.ssh/id_ed25519_personal.pub
   IdentitiesOnly yes
 
+Host lmced-viki
+    HostName cluster.lmcad.ic.unicamp.br
+    User daniel.fonseca
+    Port 8686
+    ForwardX11 yes
+
+Host lmcad-node11
+    HostName node10
+    User daniel.fonseca
+    Port 22
+    ForwardX11 yes
+    ProxyJump lmcad-viki
+    RequestTTY yes
