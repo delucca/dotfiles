@@ -29,8 +29,16 @@ Host lmcad-viki
     Port 8686
     ForwardX11 yes
 
-Host lmcad-node11
+Host lmcad-node10
     HostName node10
+    User daniel.fonseca
+    Port 22
+    ForwardX11 yes
+    ProxyJump lmcad-viki
+    RequestTTY yes
+
+Host lmcad-node11
+    HostName node11
     User daniel.fonseca
     Port 22
     ForwardX11 yes
