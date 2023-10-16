@@ -23,7 +23,7 @@ Host ogbon-login3.fieb.org.br
   IdentityFile ~/.ssh/id_ed25519_personal.pub
   IdentitiesOnly yes
 
-Host lmced-viki
+Host lmcad-viki
     HostName cluster.lmcad.ic.unicamp.br
     User daniel.fonseca
     Port 8686
