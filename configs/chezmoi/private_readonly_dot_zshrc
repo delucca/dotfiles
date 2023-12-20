@@ -96,7 +96,7 @@ if [[ -z "$ZELLIJ" && -z "$TERMINAL_EMULATOR" && "$TERM_PROGRAM" != "vscode" ]];
 fi
 
 # Attach Yubikey
-if [[ ! $(usbipd.exe list | rg "Smartcard" | sed 's/   */:/g' | cut -d':' -f5 | sed 's/.$//' ) == "Attached" ]]; then attach_yubikey; fi
+attach_yubikey
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

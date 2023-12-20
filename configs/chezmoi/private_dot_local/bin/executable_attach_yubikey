@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ $(/mnt/c/Program\ Files/usbipd-win//usbipd.exe list | rg "Smartcard" | sed 's/   */:/g' | cut -d':' -f5 | sed 's/.$//' ) == "Shared" ]]; then
+  sudo service pcscd start
+  sudo udevadm control --reload
+  sudo service udev restart
+  /mnt/c/Program\ Files/usbipd-win//usbipd.exe attach --busid $(/mnt/c/Program\ Files/usbipd-win//usbipd.exe list | rg "Smartcard" | cut -d' ' -f1) --wsl Debian
+fi

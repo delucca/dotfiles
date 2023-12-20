@@ -118,12 +118,3 @@ function get_server_addr {
   export SERVER_ADDR=$(nmap -sP 172.16.0.0/24 >/dev/null && arp -an | grep ${SERVER_MAC_ADDR} | awk '{print $2}' | sed 's/[()]//g')
   echo ${SERVER_ADDR}
 }
-
-# WSL
-# -------------------------------------------------------------------------------------------------
-
-function attach_yubikey {
-  sudo udevadm control --reload
-  sudo service udev restart
-  usbipd.exe attach --busid $(usbipd.exe list | rg "Smartcard" | cut -d' ' -f1) --wsl Debian
-}
