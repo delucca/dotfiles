@@ -89,14 +89,17 @@
 [url "git@github.com:"]
         insteadOf = <https://github.com/>
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
 [includeIf "gitdir:~/src/trilonio/"]
   path = ~/.gitconfig.trilon
 
 [includeIf "gitdir:~/src/motion/alternate-digital-channels/"]
   path = ~/.gitconfig.motion
 
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+[include]
+  path= ~/.gitconfig.local
