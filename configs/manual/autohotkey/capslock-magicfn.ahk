@@ -9,7 +9,7 @@ Capslock & s::SendInput {Down}
 Capslock & a::SendInput {Left}
 Capslock & d::SendInput {Right}
 
-Capslock & k::SendInput {Up}
-Capslock & j::SendInput {Down}
-Capslock & h::SendInput {Left}
-Capslock & l::SendInput {Right}
+; Capslock & k::SendInput {Up}
+; Capslock & j::SendInput {Down}
+; Capslock & h::SendInput {Left}
+; Capslock & l::SendInput {Right}
