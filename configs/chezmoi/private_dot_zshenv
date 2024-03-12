@@ -85,6 +85,9 @@ export VOLTA_HOME="/home/delucca/.volta"
 # ZELLIJ
 export ZELLIJ_CONFIG_DIR="/home/delucca/.zellij"
 
+# WSL Browser
+export BROWSER="/usr/bin/wslview"
+
 # PATH
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/local/bin"
