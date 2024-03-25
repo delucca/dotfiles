@@ -4,5 +4,5 @@ if [[ $(/mnt/c/Program\ Files/usbipd-win//usbipd.exe list | rg "Smartcard" | sed
   sudo service pcscd start
   sudo udevadm control --reload
   sudo service udev restart
-  /mnt/c/Program\ Files/usbipd-win//usbipd.exe attach --busid $(/mnt/c/Program\ Files/usbipd-win//usbipd.exe list | rg "Smartcard" | cut -d' ' -f1) --wsl Debian
+  /mnt/c/Program\ Files/usbipd-win//usbipd.exe attach --busid $(/mnt/c/Program\ Files/usbipd-win//usbipd.exe list | rg "Smartcard" | cut -d' ' -f1 | head -n1) --wsl Debian
 fi

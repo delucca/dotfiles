@@ -81,6 +81,7 @@ export PNPM_HOME="/home/delucca/.local/share/pnpm"
 
 # VOLTA
 export VOLTA_HOME="/home/delucca/.volta"
+export VOLTA_FEATURE_PNPM=1
 
 # ZELLIJ
 export ZELLIJ_CONFIG_DIR="/home/delucca/.zellij"
