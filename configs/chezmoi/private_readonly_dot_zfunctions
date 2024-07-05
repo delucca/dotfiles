@@ -118,3 +118,13 @@ function get_server_addr {
   export SERVER_ADDR=$(nmap -sP 172.16.0.0/24 >/dev/null && arp -an | grep ${SERVER_MAC_ADDR} | awk '{print $2}' | sed 's/[()]//g')
   echo ${SERVER_ADDR}
 }
+
+# Motion
+# -------------------------------------------------------------------------------------------------
+function import_motion_baseline {
+  local baseline_filename=$1
+
+  gcloud config configurations activate motion
+  cd /home/delucca/src/trilon/motion/motion-item-matcher
+  GOOGLE_PROJECT_ID="mit-sb-gke-de01" ELASTICSEARCH_INDEX="motioncontent" poetry run run_cf data-collection --event-data bucket=mit-mkb-sb-cs-us-data,name="${baseline_filename}"
+}

@@ -44,3 +44,19 @@ Host lmcad-node11
     ForwardX11 yes
     ProxyJump lmcad-viki
     RequestTTY yes
+
+Host lmcad-node13
+    HostName node13
+    User daniel.fonseca
+    Port 22
+    ForwardX11 yes
+    ProxyJump lmcad-viki
+    RequestTTY yes
+
+Host lmcad-node14
+    HostName node14
+    User daniel.fonseca
+    Port 22
+    ForwardX11 yes
+    ProxyJump lmcad-viki
+    RequestTTY yes

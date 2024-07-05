@@ -71,7 +71,7 @@
   browse = yes
 
 [pull]
-  rebase = true
+  rebase = false
 
 [push]
   default = current
@@ -95,10 +95,10 @@
 	process = git-lfs filter-process
 	required = true
 
-[includeIf "gitdir:~/src/trilonio/"]
+[includeIf "gitdir:~/src/trilon/"]
   path = ~/.gitconfig.trilon
 
-[includeIf "gitdir:~/src/motion/alternate-digital-channels/"]
+[includeIf "gitdir:~/src/trilon/motion/"]
   path = ~/.gitconfig.motion
 
 [include]
