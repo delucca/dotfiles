@@ -70,8 +70,8 @@ export PMY_TRIGGER_KEY='^I'
 export SPACESHIP_KUBECTL_SHOW='true'
 
 # Pyenv
-# export PYENV_VERSION="3.10.4"
-export PYENV_ROOT="$HOME/.pyenv"  
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # Rigs
 export IP_XCHRIG="10.243.80.12"
@@ -109,4 +109,3 @@ export PATH="$PATH:$PNPM_HOME"
 export PATH="$PATH:/usr/local/cuda/bin"
 export PATH="$PATH:$VOLTA_HOME/bin"
 export PATH="$PATH:/usr/local/texlive/2023/bin/x86_64-linux"
-export PATH="$PATH:/home/delucca/.pyenv/versions/3.10.13/bin"

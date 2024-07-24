@@ -112,3 +112,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Pyenv
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
